@@ -19,7 +19,7 @@ export default function GlowButton({ text, onClick, className = "" }: GlowButton
         flex justify-center items-center 
         
       
-        rounded-[14px] 
+        rounded-full 
         font-['Sora'] text-sm font-semibold
         
         /* Base Colors */

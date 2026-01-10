@@ -1,5 +1,8 @@
 import LandingHerosection from "../Section/LandingHerosection";
 import Whoweare from "../Section/whowearesec";
+import HowWeDoIt from "../Section/HowWeDoIt";
+import ProjectSec from "../Section/ProjectSec";
+import CTAsec from "../Section/CTAsec";
 
 export default function Home() {
   return (
@@ -9,6 +12,15 @@ export default function Home() {
       </section>
       <section className="flex flex-col justify-center items-start pt-10 px-5 md:px-10 lg:px-10 ">
         <Whoweare />
+      </section>
+      <section>
+        <HowWeDoIt />
+      </section>
+      <section>
+        <ProjectSec />
+      </section>
+      <section className="mt-5 md:mt-20">
+        <CTAsec />
       </section>
     </>
   );
