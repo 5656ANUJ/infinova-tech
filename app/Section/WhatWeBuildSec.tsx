@@ -1,23 +1,26 @@
 import WhatWeBuildCard from "../Components/WhatWeBuildcard";
 
 export default function WhatWeBuildSec() {
-    const WhatWeBuildInput = [
-        {
-            title: "Corporate Website",
-            description: "Professional, responsive websites that build brand credibility, communicate your message, and generate leads.",
-            icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75"
-        },
-        {
-            title: "Corporate Website",
-            description: "Professional, responsive websites that build brand credibility, communicate your message, and generate leads.",
-            icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75"
-        },
-        {
-            title: "Corporate Website",
-            description: "Professional, responsive websites that build brand credibility, communicate your message, and generate leads.",
-            icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75"
-        }
-    ]
+  const WhatWeBuildInput = [
+    {
+      title: "Corporate Website",
+      description:
+        "Professional, responsive websites that build brand credibility, communicate your message, and generate leads.",
+      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+    },
+    {
+      title: "Corporate Website",
+      description:
+        "Professional, responsive websites that build brand credibility, communicate your message, and generate leads.",
+      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+    },
+    {
+      title: "Corporate Website",
+      description:
+        "Professional, responsive websites that build brand credibility, communicate your message, and generate leads.",
+      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+    },
+  ];
   return (
     <div className="w-full p-5 md:p-10">
       <div className="flex flex-col justify-center items-center gap-5 ">
@@ -30,8 +33,13 @@ export default function WhatWeBuildSec() {
         </p>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-7 lg:gap-10 mt-5 md:mt-10">
-        {WhatWeBuildInput.map((item,index) => (
-            <WhatWeBuildCard key={index} icon={item.icon} title={item.title} description={item.description} />
+        {WhatWeBuildInput.map((item, index) => (
+          <WhatWeBuildCard
+            key={index}
+            icon={item.icon}
+            title={item.title}
+            description={item.description}
+          />
         ))}
       </div>
     </div>
