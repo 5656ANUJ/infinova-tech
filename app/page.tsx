@@ -3,10 +3,12 @@ import LandingHerosection from "./Section/LandingHerosection";
 import ProjectSec from "./Section/ProjectSec";
 import Whoweare from "./Section/whowearesec";
 import CTAsec from "./Section/CTAsec";
-import WhatWeBuildCard from "./Components/WhatWeBuildcard";
 import WhatWeBuildSec from "./Section/WhatWeBuildSec";
-import WhychooseusCard from "./Components/WhychooseusCard";
 import WhyChooseUsSec from "./Section/WhyChooseUsSec";
+import WhyAi from "./Section/WhyAi";
+import WhatWeDesignSec from "./Section/WhatWeDesignSec";
+
+
 
 
 
@@ -36,6 +38,13 @@ export default function Home() {
           <section>
             <WhyChooseUsSec/>
           </section>
+          <section>
+            <WhyAi/>
+          </section>
+         <section>
+            <WhatWeDesignSec/>
+         </section>
+
     </>
   );
 }
