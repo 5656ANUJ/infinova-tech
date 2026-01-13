@@ -1,4 +1,6 @@
+"use client";
 import WhatwedesignCard from "../Components/WhatwedesignCard";
+import { motion } from "framer-motion";
 
 export default function WhatWeDesignSec() {
   const whatWeDesignData = [
@@ -34,55 +36,75 @@ export default function WhatWeDesignSec() {
     },
   ];
 
-  return (
-    <section className="w-full flex flex-col items-center text-center mt-5 px-5 md:px-10">
-      {/* Heading */}
-      <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">
-        What We Design
-      </h1>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
-      <p className="text-xs md:text-md lg:text-lg max-w-2xl mb-10 text-gray-400">
-        We craft visually consistent, bold and thoughtful graphics tailored to
-        your brand.
-      </p>
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { type: "spring" as const, stiffness: 50 },
+    },
+  };
+
+  return (
+    <section className="w-full flex flex-col items-center text-center mt-10 md:mt-20 px-5 md:px-10 lg:px-16 overflow-hidden">
+      {/* Heading */}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="mb-10"
+      >
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600">
+          What We Design
+        </h1>
+
+        <p className="text-sm md:text-lg lg:text-xl max-w-3xl mx-auto text-gray-500">
+          We craft visually consistent, bold and thoughtful graphics tailored to
+          your brand.
+        </p>
+      </motion.div>
 
       {/* Cards Wrapper */}
-      <div
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-100px" }}
         className="
           /* Mobile: Horizontal Scroll */
-          flex gap-5 w-full overflow-x-auto snap-x snap-mandatory no-scrollbar pb-10
-
-          /* Tablet & up: Grid layout */
-          md:grid md:overflow-visible md:w-auto md:mx-auto md:gap-6
-
-          /* Tablet Portrait: 2 columns */
-          md:portrait:grid-cols-2
-
-          /* Tablet Landscape: 3 columns */
-          md:landscape:grid-cols-3
-
-          /* Desktop */
-          lg:grid-cols-3 lg:gap-[65px] lg:px-[65px]
+          flex gap-5 w-full overflow-x-auto snap-x snap-mandatory no-scrollbar pb-10 px-1
+          
+          /* Tablet & Desktop: Grid */
+          md:grid md:overflow-visible md:w-full md:mx-auto md:gap-8
+          md:grid-cols-2 lg:grid-cols-3
         "
       >
         {whatWeDesignData.map((item, index) => (
-          <div
+          <motion.div
             key={index}
+            variants={itemVariants}
             className="
               shrink-0 snap-center
-              w-[260px] sm:w-[280px]
-
+              w-[280px] sm:w-[320px]
               md:w-auto md:shrink md:snap-none
               flex justify-center
             "
           >
-            <WhatwedesignCard
-              title={item.title}
-              image={item.image}
-            />
-          </div>
+            <WhatwedesignCard title={item.title} image={item.image} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   );
 }

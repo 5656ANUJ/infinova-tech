@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function AIAutoCard({
   icon,
   title,
@@ -8,20 +11,30 @@ export default function AIAutoCard({
   description: string;
 }) {
   return (
-    <div className="flex flex-col justify-center items-center gap-5 p-5 md:py-5 max-w-90 max-h-60 aspect-4/3 rounded-[7px] border-[3px] border-[#683FFF]">
-      <div className="flex flex-row justify-center items-center gap-5 px-10">
-        <img
+    <motion.div
+      whileHover={{ scale: 1.05, borderColor: "#8c6dfd" }}
+      initial={{ opacity: 0, scale: 0.95 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
+      className="flex flex-col justify-center items-center gap-4 p-5 md:py-6 w-full max-w-sm rounded-[12px] border-[3px] border-[#683FFF] bg-[#683FFF]/5 backdrop-blur-sm cursor-pointer"
+    >
+      <div className="flex flex-row justify-center items-center gap-4 px-2 w-full">
+        <motion.img
+          whileHover={{ rotate: 10 }}
           src={icon}
-          alt=""
-          className="w-15 h-15 md:w-20 md:h-20 lg:w-24 lg:h-24"
+          alt={title}
+          className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 object-contain"
         />
-        <h1 className="font-medium text-lg md:text-xl lg:text-2xl">{title}</h1>
+        <h1 className="font-bold text-lg md:text-xl lg:text-2xl text-white leading-tight">
+          {title}
+        </h1>
       </div>
-      <div>
-        <p className="text-justify lg:text-center text-xs md:text-sm lg:text-base">
+      <div className="w-full">
+        <p className="text-center text-xs md:text-sm lg:text-base text-gray-200 leading-relaxed px-2">
           {description}
         </p>
       </div>
-    </div>
+    </motion.div>
   );
 }

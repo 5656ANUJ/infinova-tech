@@ -1,11 +1,21 @@
+"use client";
 
-
+import { motion } from "framer-motion";
 
 export default function AboutusHeroSec() {
-    return (
-        <div className="flex flex-col justify-center items-center gap-8 mt-10 mb-10 ">
-        <h1 className="font-['Sora'] text-[#FFF] text-center font-bold leading-normal text-[40px] md:text-[66px] lg:text-4xl">About Us</h1>
-        <h3 className="text-[#FFF] text-center font-['McLaren'] font-normal leading-normal text-[16px] md:text-[24px] lg:text-2xl">Bringing Your Vision to Life with Expertise and Dedication</h3>
-        </div>
-    )
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-col justify-center items-center gap-6 mt-16 mb-16 px-5"
+    >
+      <h1 className="font-['Sora'] text-white text-center font-bold leading-tight text-3xl md:text-5xl lg:text-7xl max-w-5xl">
+        About Us
+      </h1>
+      <h3 className="text-gray-300 text-center font-['McLaren'] font-normal leading-relaxed text-sm md:text-lg lg:text-2xl max-w-4xl">
+        Bringing Your Vision to Life with Expertise and Dedication
+      </h3>
+    </motion.div>
+  );
 }

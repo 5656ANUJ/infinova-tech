@@ -1,34 +1,55 @@
+"use client";
 interface GlassContainerProps {
-    title: string;
-    description: string;
+  title: string;
+  description: string;
+  index?: number;
 }
-export default function GlassContainer({ title, description }: GlassContainerProps) {
-  
-  
-    return (
-    <div
+
+import { motion } from "framer-motion";
+
+export default function GlassContainer({
+  title,
+  description,
+  index,
+}: GlassContainerProps) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      whileHover={{ scale: 1.02, backgroundColor: "rgba(255, 255, 255, 0.15)" }}
       className="/* Layout & Sizing */
   flex flex-col 
-  w-full max-w-124.5 min-h-29.5
+  w-full max-w-[500px] min-h-[120px]
   
-  /* Spacing (Mobile -> Desktop) */
-  p-4 md:p-[18px_31px_17px_31px] 
-  gap-1.75
+  /* Spacing */
+  p-5 md:p-8
+  gap-2
   
   /* Alignment */
-  justify-center md:justify-end 
-  items-start md:items-start
+  justify-center items-start
   
   /* Glassmorphism Styles */
   bg-white/10 
-  backdrop-blur-[15.36px]
-  rounded-[23.042px] 
-  border-[1.157px] border-white/50 "
+  backdrop-blur-md
+  rounded-2xl
+  border border-white/20
+  cursor-pointer"
     >
-      <h1 className="text-white font-['Sora'] text-[20px] md:text-xl lg:text-2xl font-semibold uppercase leading-[140%]">{title}</h1>
-      <p className="text-white text-justify md:text-left font-['Roboto'] text-[16px] md:text-lg lg:text-xl font-normal leading-[150%]">
+      <div className="flex items-center gap-4 mb-2">
+        {index && (
+          <span className="text-blue-400 font-bold text-lg md:text-xl">
+            {index.toString().padStart(2, "0")}
+          </span>
+        )}
+        <h1 className="text-white font-['Sora'] text-lg md:text-xl font-bold uppercase leading-tight tracking-wide">
+          {title}
+        </h1>
+      </div>
+      <p className="text-gray-200 text-left font-['Roboto'] text-sm md:text-base font-normal leading-relaxed">
         {description}
       </p>
-    </div>
+    </motion.div>
   );
 }

@@ -1,65 +1,83 @@
+"use client";
 import React from "react";
 import GlassContainer from "../Components/GlassContainer";
 import PrimaryButton from "../Components/borderBtn";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function HowWeDoIt() {
-  
   const GlassContainerInput = [
     {
       title: "Inital Consultaion",
-      description: "We listen deeply to understand your unique business challenges and technological requirements.",
+      description:
+        "We listen deeply to understand your unique business challenges and technological requirements.",
     },
     {
       title: "strategic planning",
-      description: "Our experts craft a tailored digital strategy that aligns precisely with your business objectives.",
+      description:
+        "Our experts craft a tailored digital strategy that aligns precisely with your business objectives.",
     },
     {
       title: "technical execution",
-      description: "We deploy cutting-edge technologies with precision, transforming your digital vision into reality.",
+      description:
+        "We deploy cutting-edge technologies with precision, transforming your digital vision into reality.",
     },
     {
       title: "final delivery",
-      description: "We ensure seamless implementation and provide ongoing support to drive continuous digital innovation.",
+      description:
+        "We ensure seamless implementation and provide ongoing support to drive continuous digital innovation.",
     },
   ];
 
+  const { scrollYProgress } = useScroll();
+  const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
+
   return (
-    <main className="min-h-screen text-white px-6 md:px-10 py-12 md:py-20">
-      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 lg:gap-20 items-start">
-        
-        {/* Left Content Section */}
-        <div className="flex flex-col gap-6 w-full md:w-1/2 lg:sticky lg:top-20">
-          <h4 className="text-blue-400 font-medium uppercase tracking-widest text-sm">
+    <section className="min-h-screen text-white px-5 md:px-10 lg:px-16 py-12 md:py-20 flex flex-col justify-center relative overflow-hidden">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row gap-12 lg:gap-20 items-start w-full relative z-10">
+        {/* Left Content Section - Sticky & Parallax */}
+        <motion.div
+          style={{ y }}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="flex flex-col gap-6 w-full md:w-1/2 md:sticky md:top-32"
+        >
+          <h4 className="text-blue-400 font-medium uppercase tracking-widest text-sm font-['Inter']">
             How we do
           </h4>
           <h1 className="font-['Sora'] text-4xl md:text-5xl lg:text-6xl font-extrabold capitalize leading-tight tracking-tight">
             Our proven path to digital transformation
           </h1>
-          <div className="pt-4">
+          <motion.div whileHover={{ scale: 1.05 }} className="pt-4">
             <PrimaryButton text="Start Your Journey" />
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Right Timeline/Cards Section */}
-        <div className="flex flex-col w-full md:w-1/2 items-center md:items-start">
+        <motion.div className="flex flex-col w-full md:w-1/2 items-center md:items-start">
           {GlassContainerInput.map((item, index) => (
             <React.Fragment key={index}>
               <GlassContainer
                 title={item.title}
                 description={item.description}
-                // Pass the index so the card can display "01", "02", etc.
-                index={index + 1} 
+                index={index + 1}
               />
-              
-              {/* JOINING LINE: Only render if it's NOT the last item */}
+
+              {/* JOINING LINE */}
               {index !== GlassContainerInput.length - 1 && (
-                <div className="w-[1.157px] h-12 bg-gradient-to-b from-white/40 to-transparent ml-[31px] md:ml-[60px]"></div>
+                <motion.div
+                  initial={{ height: 0 }}
+                  whileInView={{ height: 48 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="w-[1px] bg-gradient-to-b from-white/40 to-transparent ml-[26px] md:ml-[42px] my-1"
+                ></motion.div>
               )}
             </React.Fragment>
           ))}
-        </div>
-
+        </motion.div>
       </div>
-    </main>
+    </section>
   );
 }

@@ -1,4 +1,6 @@
+"use client";
 import AIAutoCard from "../Components/AIAutoCard";
+import { motion } from "framer-motion";
 
 export default function WhyAi() {
   const data = [
@@ -9,37 +11,73 @@ export default function WhyAi() {
       icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
     },
     {
-      title: "Increase Productivity",
+      title: "Reduce Errors",
       description:
-        "Automate repetitive tasks and free up your team to focus on strategic initiatives.",
+        "Minimize human error with precise, automated workflows and intelligent data processing.",
       icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
     },
     {
-      title: "Increase Productivity",
+      title: "Scale Faster",
       description:
-        "Automate repetitive tasks and free up your team to focus on strategic initiatives.",
+        "Seamlessly expand your operations without proportional increases in overhead costs.",
       icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
     },
   ];
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, scale: 0.9 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.4 } },
+  };
+
   return (
-    <div className="flex flex-col justify-center items-center gap-5 px-5 md:px-10 mt-5 md:mt-10">
-      <h1 className="text-[#FFF] font-sora text-2xl md:text-3xl lg:text-4xl font-semibold capitalize leading-normal text-center">
-        Why Choose Al Automation?
-      </h1>
-      <p className="text-white text-center font-mclaren text-sm md:text-md lg:text-xl font-normal leading-[150%]">
-        Leverage the power of Al to transform your business operations and
-        achieve remarkable outcomes.
-      </p>
-      <div className="flex flex-col md:flex-row justify-center items-center gap-5 md:gap-10 mt-5 md:mt-10 px-5 md:px-10">
+    <div className="flex flex-col justify-center items-center gap-8 px-5 md:px-10 lg:px-16 mt-16 md:mt-24 mb-16">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col items-center gap-4"
+      >
+        <h1 className="text-white font-['Sora'] text-2xl md:text-3xl lg:text-4xl font-semibold capitalize leading-tight text-center">
+          Why Choose AI Automation?
+        </h1>
+        <p className="text-gray-300 text-center font-['McLaren'] text-sm md:text-base lg:text-xl font-normal leading-relaxed max-w-3xl">
+          Leverage the power of AI to transform your business operations and
+          achieve remarkable outcomes.
+        </p>
+      </motion.div>
+
+      <motion.div
+        variants={containerVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 w-full max-w-7xl"
+      >
         {data.map((item, index) => (
-          <AIAutoCard
+          <motion.div
             key={index}
-            title={item.title}
-            description={item.description}
-            icon={item.icon}
-          />
+            variants={itemVariants}
+            className="w-full flex justify-center"
+          >
+            <AIAutoCard
+              title={item.title}
+              description={item.description}
+              icon={item.icon}
+            />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </div>
   );
 }

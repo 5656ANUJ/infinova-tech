@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function WhychooseusCard({
   icon,
   title,
@@ -8,25 +11,28 @@ export default function WhychooseusCard({
   description: string;
 }) {
   return (
-    <div
+    <motion.div
+      whileHover={{ scale: 1.05 }}
+      initial={{ opacity: 0, y: 15 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4 }}
       className="
-      flex flex-col w-auto max-w-70 h-auto  justify-center items-center gap-1 md:gap-4 rounded-[20px] backdrop-blur-[15.2px] 
-      
-      /* Animation & Hover Effects */
-      transition-all duration-500 ease-in-out cursor-pointer
-      hover:scale-[1.03]"
+      flex flex-col w-full max-w-xs h-auto justify-center items-center gap-2 md:gap-4 rounded-[20px] backdrop-blur-md p-4
+      cursor-pointer"
     >
-      <img
+      <motion.img
+        whileHover={{ rotate: 10, scale: 1.1 }}
         src={icon}
         alt={title}
-        className="w-10 h-10 md:w-20 md:h-20 object-contain transition-transform duration-500 hover:scale-105"
+        className="w-12 h-12 md:w-20 md:h-20 object-contain"
       />
-      <h1 className="text-[16px] md:text-2xl font-medium text-center text-white tracking-tight">
+      <h1 className="text-base md:text-2xl font-bold text-center text-white tracking-tight">
         {title}
       </h1>
-      <p className="text-[12px] md:text-lg font-normal text-center md:text-center text-white/70 leading-relaxed">
+      <p className="text-xs md:text-base font-normal text-center text-gray-300 leading-relaxed">
         {description}
       </p>
-    </div>
+    </motion.div>
   );
 }
