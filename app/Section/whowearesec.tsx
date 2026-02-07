@@ -21,8 +21,8 @@ export default function Whoweare() {
       </motion.h3>
 
       <h1 className="text-white text-center font-['Sora'] text-2xl md:text-4xl lg:text-5xl font-bold leading-tight capitalize max-w-4xl">
-        Innovative Technology Meets{" "}
-        <span className="text-blue-500">Human Creativity</span>
+        Innovative Technology Meets
+      Human Creativity
       </h1>
 
       <p className="text-gray-300 text-center font-['McLaren'] text-sm md:text-lg lg:text-xl leading-relaxed max-w-3xl">

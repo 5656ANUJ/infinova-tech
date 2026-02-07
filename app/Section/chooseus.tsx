@@ -44,7 +44,7 @@ const ChooseUs = ({ services }: ChooseUsProps) => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <ServiceCard service={service} />
+              <ServiceCard {...service} />
             </motion.div>
           ))}
         </motion.div>

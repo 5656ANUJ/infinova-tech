@@ -26,7 +26,7 @@ export default function Navbar() {
   return (
     <>
       {/* NAVBAR CONTAINER */}
-      <div className="w-full md:h-fit max-w-[1128px] h-[140px] lg:h-[72px] mx-auto mt-11 px-[1.5px] py-[1.5px] border border-white/10 bg-white/5 backdrop-blur-sm text-white rounded-[30px]">
+      <div className="sticky top-0 z-100 w-full md:h-fit max-w-330 h-35 lg:h-18 mx-auto mt-11 px-[1.5px] py-[1.5px] border border-white/10 bg-white/5 backdrop-blur-md text-white rounded-[30px]">
         <motion.header className="flex justify-center h-full relative z-50">
           <motion.nav
             className="
@@ -41,7 +41,7 @@ export default function Navbar() {
           >
             {/* Mobile Hamburger / Cross */}
             <motion.button
-              className="lg:hidden absolute md:text-4xl  left-6 top-1/2 -translate-y-1/2 text-white text-5xl z-[100] hover:text-blue-300 cursor-pointer"
+              className="lg:hidden absolute md:text-4xl  left-6 top-1/2 -translate-y-1/2 text-white text-5xl z-100 hover:text-blue-300 cursor-pointer"
               onClick={toggleMenu}
               whileTap={{ scale: 0.9 }}
               whileHover={{ scale: 1.1 }}
@@ -54,9 +54,9 @@ export default function Navbar() {
             <div className="flex items-center justify-center w-full lg:w-auto z-50">
               <span className="flex items-center gap-2 font-semibold text-white text-base lg:text-lg">
                 <img
-                  src="/company_logo.svg"
+                  src="/InfinovaLogo.png"
                   alt="Infinova Logo"
-                  className="w-[400px] h-fit md:h-16 md:m-1.5 md:p-1.5 lg:w-42 lg:h-42 object-contain"
+                  className="w-20 md:w-40 lg:w-50 h-fit  "
                 />
               </span>
             </div>

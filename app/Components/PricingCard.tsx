@@ -1,6 +1,7 @@
 "use client";
 import { useInView, motion, useAnimation } from "framer-motion";
 import { useRef, useEffect } from "react";
+import VioletBtn from "./violetBtn";
 
 interface PricingCardProps {
   title: string;
@@ -127,11 +128,20 @@ export default function PricingCard({
                 dangerouslySetInnerHTML={{ __html: tickMarkSvg }}
               />
             ) : (
-              <img
-                src="./check_circle.svg"
-                alt=""
-                className="  md:h-8 lg:h-5 h-11 mr-4 lg:mr-0 lg:w-5 w-fit lg:mt-2 mt-2 "
-              />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth={1.5}
+                stroke="currentColor"
+                className="md:h-8 lg:h-5 h-11 mr-4 lg:mr-0 lg:w-5 w-11 lg:mt-2 mt-2 flex-shrink-0 text-[#00A018]"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                />
+              </svg>
             )}
             <span className="flex-1  lg:text-xl text:2xl md:text-3xl">
               {item}
@@ -148,26 +158,12 @@ export default function PricingCard({
         <a
           href={buttonLink}
           onClick={onClick}
-          className="
-            block w-fit rounded-[999px]
-            bg-[#683FFF]
-            
-            text-white font-semibold text-2xl lg:text-base py-4 text-center
-             group-hover:scale-[1.02] group-hover:bg-[#4F56G8]
-            transition-all duration-200 no-underline p-8 
-          "
+          className="no-underline block w-fit mx-auto"
         >
-          <span className="flex items-center md:text-[26px]  justify-center gap-2 md:text-2xl lg:text-xl text-[42px] ">
-            {buttonLabel}
-            {arrowSvg ? (
-              <div
-                className="w-5 h-5  flex-shrink-0"
-                dangerouslySetInnerHTML={{ __html: arrowSvg }}
-              />
-            ) : (
-              <span>→</span>
-            )}
-          </span>
+          <VioletBtn
+            text={buttonLabel}
+            className="!rounded-full !px-12 !py-4 !text-xl lg:!text-lg"
+          />
         </a>
       </motion.div>
     </motion.div>

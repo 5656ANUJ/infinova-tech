@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 
 interface Service {
   title: string;
@@ -12,7 +11,7 @@ interface ServicesSectionProps {
   services?: Service[];
 }
 
-const ServicesSection = ({
+const Process = ({
   title = " Our Process",
   subtitle = "Our trusted way to build your digital future",
   services = [],
@@ -106,4 +105,4 @@ const ServicesSection = ({
   );
 };
 
-export default ServicesSection;
+export default Process;

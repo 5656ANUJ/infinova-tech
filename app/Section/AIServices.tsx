@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import { services } from "../data";
-import ServiceTabs from "../Components/ServiceTabs";
+import ServiceTabs from "../Components/AIServiceTabs";
 import ServiceCard from "../Components/ServiceCard";
 
 export default function AIServices() {
@@ -25,7 +25,7 @@ export default function AIServices() {
 
         {/* Card */}
         <div className="flex justify-center  lg:justify-end lg:w-150 text-justify ">
-          <ServiceCard service={services[active as keyof typeof services]} />
+          <ServiceCard {...services[active as keyof typeof services]} />
         </div>
       </div>
     </section>

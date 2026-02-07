@@ -1,13 +1,9 @@
 "use client";
 import PrimaryButton from "../Components/borderBtn";
 import WhiteBtn from "../Components/GlowBtn";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function LandingHerosection() {
-  const { scrollY } = useScroll();
-  const yText = useTransform(scrollY, [0, 300], [0, 100]); // Moves down slower
-  const yButtons = useTransform(scrollY, [0, 300], [0, 50]); // Moves down even slower
-
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -34,10 +30,7 @@ export default function LandingHerosection() {
       animate="visible"
       className="flex flex-col justify-center items-center gap-10 w-full relative z-10"
     >
-      <motion.div
-        style={{ y: yText }}
-        className="flex flex-col items-center gap-10"
-      >
+      <motion.div className="flex flex-col items-center gap-10">
         <motion.h1
           variants={itemVariants}
           className="text-white text-center font-['Sora'] text-[36px] md:text-[65px] lg:text-[85px] font-bold leading-[110%] capitalize max-w-5xl"
@@ -57,7 +50,6 @@ export default function LandingHerosection() {
         </motion.p>
       </motion.div>
       <motion.div
-        style={{ y: yButtons }}
         variants={itemVariants}
         className="flex flex-row gap-3 md:gap-5 lg:gap-8"
       >
