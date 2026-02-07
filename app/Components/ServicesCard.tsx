@@ -90,7 +90,7 @@ const ServicesCard = ({
           className={`relative h-full bg-transparent backdrop-blur-xl  shadow-2xl justify-center min-w-full md:group-hover:min-w-[40%] transition-all duration-500 ease-in-out overflow-hidden flex items-center min-w-full md:group-hover:min-w-[40%]
            ${isLeft ? "justify-start" : "justify-end"}`}
         >
-          <div className="absolute  inset-0 justify-center grid place-items-center  overflow-hidden transition-transform duration-700 group-hover:scale-110">
+          <div className="absolute  inset-0 justify-center grid place-items-center  overflow-hidden transition-transform duration-700 group-hover:scale-110 bg-black">
             <img
               src={image || "../youtube.svg"}
               alt=""
