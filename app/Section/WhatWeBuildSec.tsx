@@ -1,28 +1,10 @@
 "use client";
 import WhatWeBuildCard from "../Components/WhatWeBuildcard";
 import { motion } from "framer-motion";
+import { WhatWeBuildInput } from "../data";
 
 export default function WhatWeBuildSec() {
-  const WhatWeBuildInput = [
-    {
-      title: "Corporate Website",
-      description:
-        "Professional, responsive websites that build brand credibility, communicate your message, and generate leads.",
-      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
-    },
-    {
-      title: "E-Commerce",
-      description:
-        "Scalable online stores with seamless checkout experiences to maximize code-driven sales.",
-      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
-    },
-    {
-      title: "Custom Web Apps",
-      description:
-        "Tailored web applications designed to streamline operations and enhance user engagement.",
-      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
-    },
-  ];
+  
 
   const containerVariants = {
     hidden: { opacity: 0 },

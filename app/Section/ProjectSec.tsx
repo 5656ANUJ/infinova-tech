@@ -1,35 +1,11 @@
 "use client";
 import ProjectContainer from "../Components/projectContainer";
 import { motion } from "framer-motion";
+import { projects } from "../data";
 
 export default function ProjectSec() {
   // Example data array to simulate multiple projects
-  const projects = [
-    {
-      title: "Project Alpha",
-      description:
-        "A cutting-edge solution leveraging AI and IoT to transform manufacturing processes.",
-      images: [
-        "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800",
-        "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=800",
-        "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&q=80&w=800",
-        "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&q=80&w=800",
-        "https://images.unsplash.com/photo-1535378437321-20e977369346?auto=format&fit=crop&q=80&w=800",
-      ],
-    },
-    {
-      title: "Project Beta",
-      description:
-        "Next-gen e-commerce platform with 3D previews and real-time inventory tracking.",
-      images: [
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-        "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=800",
-        "https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&q=80&w=800",
-        "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&q=80&w=800",
-        "https://images.unsplash.com/photo-1556742111-a3010dbbbe48?auto=format&fit=crop&q=80&w=800",
-      ],
-    },
-  ];
+ 
 
   return (
     <motion.div

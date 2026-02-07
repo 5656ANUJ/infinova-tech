@@ -1,6 +1,6 @@
 "use client";
 import PrimaryButton from "../Components/borderBtn";
-import WhiteBtn from "../Components/WhiteBtn";
+import WhiteBtn from "../Components/GlowBtn";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function LandingHerosection() {

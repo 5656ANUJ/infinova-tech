@@ -1,28 +1,10 @@
 "use client";
 import AIAutoCard from "../Components/AIAutoCard";
 import { motion } from "framer-motion";
+import {WhyAidata} from "../data";
 
 export default function WhyAi() {
-  const data = [
-    {
-      title: "Increase Productivity",
-      description:
-        "Automate repetitive tasks and free up your team to focus on strategic initiatives.",
-      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
-    },
-    {
-      title: "Reduce Errors",
-      description:
-        "Minimize human error with precise, automated workflows and intelligent data processing.",
-      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
-    },
-    {
-      title: "Scale Faster",
-      description:
-        "Seamlessly expand your operations without proportional increases in overhead costs.",
-      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
-    },
-  ];
+  
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -64,7 +46,7 @@ export default function WhyAi() {
         viewport={{ once: true, margin: "-50px" }}
         className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-8 w-full max-w-7xl"
       >
-        {data.map((item, index) => (
+        {WhyAidata.map((item, index) => (
           <motion.div
             key={index}
             variants={itemVariants}

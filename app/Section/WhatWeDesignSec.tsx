@@ -1,41 +1,10 @@
 "use client";
 import WhatwedesignCard from "../Components/WhatwedesignCard";
 import { motion } from "framer-motion";
+import { whatWeDesignData } from "../data";
 
 export default function WhatWeDesignSec() {
-  const whatWeDesignData = [
-    {
-      title: "Material Design",
-      image:
-        "https://images.unsplash.com/photo-1768158984380-5071c359070f?q=80&w=687&auto=format&fit=crop",
-    },
-    {
-      title: "Material Design",
-      image:
-        "https://images.unsplash.com/photo-1768158984380-5071c359070f?q=80&w=687&auto=format&fit=crop",
-    },
-    {
-      title: "Material Design",
-      image:
-        "https://images.unsplash.com/photo-1768158984380-5071c359070f?q=80&w=687&auto=format&fit=crop",
-    },
-    {
-      title: "Material Design",
-      image:
-        "https://images.unsplash.com/photo-1768158984380-5071c359070f?q=80&w=687&auto=format&fit=crop",
-    },
-    {
-      title: "Material Design",
-      image:
-        "https://images.unsplash.com/photo-1768158984380-5071c359070f?q=80&w=687&auto=format&fit=crop",
-    },
-    {
-      title: "Material Design",
-      image:
-        "https://images.unsplash.com/photo-1768158984380-5071c359070f?q=80&w=687&auto=format&fit=crop",
-    },
-  ];
-
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {

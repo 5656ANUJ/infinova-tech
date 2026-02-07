@@ -1,5 +1,5 @@
 "use client";
-import WhiteBtn from "./WhiteBtn";
+import WhiteBtn from "./GlowBtn";
 import { motion } from "framer-motion";
 
 interface ProjectData {

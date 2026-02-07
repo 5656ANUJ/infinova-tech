@@ -5,46 +5,66 @@ import Whoweare from "./Section/whowearesec";
 import CTAsec from "./Section/CTAsec";
 import WhatWeBuildSec from "./Section/WhatWeBuildSec";
 import WhyChooseUsSec from "./Section/WhyChooseUsSec";
-import WhyAi from "./Section/WhyAi";
-import WhatWeDesignSec from "./Section/WhatWeDesignSec";
-
-
-
-
-
-
+import AIServices from "./Section/AIServices";
+import PriceCardContainer from "./Section/PricingComp";
+import TestimonialSec from "./Section/TestimonialSec";
 
 export default function Home() {
   return (
     <>
-    <section className="flex mt-20 pt-2 pb-2 px-5 md:pt-5 md:pb-4 md:px-10 lg:pt-10 lg:pb-14 lg:px-16.25 justify-center items-center">
-            <LandingHerosection />
-          </section>
-          <section className="flex flex-col justify-center items-start pt-10 px-5 md:px-10 lg:px-10 ">
-            <Whoweare />
-          </section>
-          <section>
-            <HowWeDoIt />
-          </section>
-          <section>
-            <ProjectSec/>
-          </section>
-          <section  className="mt-5 md:mt-20">
-            <CTAsec/>
-          </section>
-          <section>
-            <WhatWeBuildSec/>
-          </section>
-          <section>
-            <WhyChooseUsSec/>
-          </section>
-          <section>
-            <WhyAi/>
-          </section>
-         <section>
-            <WhatWeDesignSec/>
-         </section>
+      {/* Hero Section */}
+      <section className="pt-32 md:pt-36 lg:pt-40 pb-16 md:pb-20 lg:pb-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+          <LandingHerosection />
+        </div>
+      </section>
 
+      {/* Who We Are Section */}
+      <section className="py-16 md:py-20 lg:py-24">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 lg:px-12">
+          <Whoweare />
+        </div>
+      </section>
+
+      {/* Digital Solutions - What We Build */}
+      <section className="py-16 md:py-20 lg:py-24">
+        <WhatWeBuildSec />
+      </section>
+
+      {/* Our Process - How We Do It */}
+      <section className="py-16 md:py-20 lg:py-24">
+        <HowWeDoIt />
+      </section>
+
+      {/* Project Showcase */}
+      <section className="py-16 md:py-20 lg:py-24">
+        <ProjectSec />
+      </section>
+
+      {/* Services Section with Tabs */}
+      <section className="py-16 md:py-20 lg:py-24">
+        <AIServices />
+      </section>
+
+      {/* Why Choose Us */}
+      <section className="py-16 md:py-20 lg:py-24">
+        <WhyChooseUsSec />
+      </section>
+
+      {/* Pricing Plans */}
+      <section className="py-16 md:py-20 lg:py-24">
+        <PriceCardContainer />
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 md:py-20 lg:py-24">
+        <TestimonialSec />
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-16 md:py-20 lg:py-24">
+        <CTAsec />
+      </section>
     </>
   );
 }

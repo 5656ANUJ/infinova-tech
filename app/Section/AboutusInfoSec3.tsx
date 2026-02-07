@@ -1,25 +1,10 @@
 
 import AboutusfeaturesCard from "../Components/aboutusfeaturesCard";
+import { AboutcardInput } from "../data";
 
 export default function AboutusInfoSec3() {
 
-    const cardInput = [
-        {
-            title: "Professional Team",
-            description: "A dependable team that knows how to get things done.We blend creativity with solid technical skills.",
-            src: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-7II0KvR0kyXodGCkseeO8axKN1qr0o.png&w=1000&q=75"
-        },
-        {
-            title: "Target Oriented",
-            description: "Every project follows a clear goal.Your targets guide our direction..",
-            src: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-7II0KvR0kyXodGCkseeO8axKN1qr0o.png&w=1000&q=75"
-        },
-        {
-            title: "Professional Team",
-            description: "A dependable team that knows how to get things done.We blend creativity with solid technical skills.",
-            src: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-7II0KvR0kyXodGCkseeO8axKN1qr0o.png&w=1000&q=75"
-        }
-    ]
+    
   return (
     
     <div className="w-full p-5 md:p-10">
@@ -34,7 +19,7 @@ export default function AboutusInfoSec3() {
         </p>
       </div>
       <div className="flex flex-col md:flex-row justify-center items-center md:items-start gap-5 mt-5 md:mt-10 p-5">
-        {cardInput.map((item, index) => (
+        {AboutcardInput.map((item, index) => (
           <AboutusfeaturesCard key={index} title={item.title} description={item.description} src={item.src} />
         ))}
       </div>

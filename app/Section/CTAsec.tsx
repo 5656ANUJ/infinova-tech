@@ -1,6 +1,6 @@
 "use client";
 import PrimaryButton from "../Components/borderBtn";
-import GlowButton from "../Components/WhiteBtn";
+import GlowButton from "../Components/GlowBtn";
 import { motion } from "framer-motion";
 
 export default function CTAsec() {

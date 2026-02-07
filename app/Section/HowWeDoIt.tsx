@@ -3,30 +3,10 @@ import React from "react";
 import GlassContainer from "../Components/GlassContainer";
 import PrimaryButton from "../Components/borderBtn";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { GlassContainerInput } from "../data";
 
 export default function HowWeDoIt() {
-  const GlassContainerInput = [
-    {
-      title: "Inital Consultaion",
-      description:
-        "We listen deeply to understand your unique business challenges and technological requirements.",
-    },
-    {
-      title: "strategic planning",
-      description:
-        "Our experts craft a tailored digital strategy that aligns precisely with your business objectives.",
-    },
-    {
-      title: "technical execution",
-      description:
-        "We deploy cutting-edge technologies with precision, transforming your digital vision into reality.",
-    },
-    {
-      title: "final delivery",
-      description:
-        "We ensure seamless implementation and provide ongoing support to drive continuous digital innovation.",
-    },
-  ];
+  
 
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);

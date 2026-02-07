@@ -1,37 +1,10 @@
 "use client";
 import WhychooseusCard from "../Components/WhychooseusCard";
 import { motion } from "framer-motion";
+import { WhychooseusData } from "../data";
 
 export default function WhyChooseUsSec() {
-  const WhychooseusData = [
-    {
-      title: "Saves Your Time",
-      description: "We handle content while you focus on your business.",
-      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
-    },
-    {
-      title: "Expert Support",
-      description:
-        "Our team is always ready to assist you with any technical needs.",
-      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
-    },
-    {
-      title: "Scalable Solutions",
-      description: "Future-proof architectures that grow with your business.",
-      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
-    },
-    {
-      title: "Cost Effective",
-      description: "Top-tier quality without breaking the bank.",
-      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
-    },
-    {
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security standards for all projects.",
-      icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
-    },
-  ];
-
+  
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
