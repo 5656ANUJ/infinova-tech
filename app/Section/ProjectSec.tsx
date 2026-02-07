@@ -4,23 +4,46 @@ import { motion } from "framer-motion";
 import { projects } from "../data";
 
 export default function ProjectSec() {
-  // Example data array to simulate multiple projects
- 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" as const },
+    },
+  };
 
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
       viewport={{ once: true }}
       className="mt-20 mb-20 px-5 md:px-10 lg:px-16"
     >
       <div className="flex flex-col gap-2 mb-10 w-full max-w-7xl mx-auto">
-        <h4 className="text-blue-400 text-sm md:text-base font-['Inter'] uppercase tracking-widest font-medium">
+        <motion.h4
+          variants={itemVariants}
+          className="text-blue-400 text-sm md:text-base uppercase tracking-widest font-medium"
+        >
           Case Studies
-        </h4>
-        <h1 className="text-white text-3xl md:text-5xl font-['Sora'] font-bold leading-tight capitalize">
+        </motion.h4>
+        <motion.h1
+          variants={itemVariants}
+          className="text-white text-3xl md:text-5xl font-bold leading-tight capitalize"
+        >
           Project Showcase
-        </h1>
+        </motion.h1>
       </div>
 
       {/* Scrollable Parent Container */}

@@ -1,11 +1,13 @@
-import HowWeDoIt from "./Section/HowWeDoIt";
+import dynamic from "next/dynamic";
 import LandingHerosection from "./Section/LandingHerosection";
-import ProjectSec from "./Section/ProjectSec";
-import Whoweare from "./Section/whowearesec";
-import CTAsec from "./Section/CTAsec";
-import PriceCardContainer from "./Section/PricingComp";
-import TestimonialSec from "./Section/TestimonialSec";
-import ServicesSec from "./Section/ServicesSec";
+
+const HowWeDoIt = dynamic(() => import("./Section/HowWeDoIt"));
+const ProjectSec = dynamic(() => import("./Section/ProjectSec"));
+const Whoweare = dynamic(() => import("./Section/whowearesec"));
+const CTAsec = dynamic(() => import("./Section/CTAsec"));
+const PriceCardContainer = dynamic(() => import("./Section/PricingComp"));
+const TestimonialSec = dynamic(() => import("./Section/TestimonialSec"));
+const ServicesSec = dynamic(() => import("./Section/ServicesSec"));
 
 export default function Home() {
   return (
@@ -28,7 +30,6 @@ export default function Home() {
       <section className="py-16 md:py-20 lg:py-24">
         <HowWeDoIt />
       </section>
-
 
       {/* Project Showcase */}
       <section className="py-16 md:py-20 lg:py-24">

@@ -39,15 +39,15 @@ export default function GlassContainer({
     >
       <div className="flex items-center gap-4 mb-2">
         {index && (
-          <span className="text-blue-400 font-bold text-lg md:text-xl">
+          <span className="text-[#b9b5ff] font-bold text-xl md:text-4xl">
             {index.toString().padStart(2, "0")}
           </span>
         )}
-        <h1 className="text-white font-['Sora'] text-lg md:text-xl font-bold uppercase leading-tight tracking-wide">
+        <h1 className="text-white text-xl md:text-2xl font-bold uppercase leading-tight tracking-wide">
           {title}
         </h1>
       </div>
-      <p className="text-gray-200 text-left font-['Roboto'] text-sm md:text-base font-normal leading-relaxed">
+      <p className="text-gray-200 text-left text-sm md:text-base font-normal leading-relaxed">
         {description}
       </p>
     </motion.div>

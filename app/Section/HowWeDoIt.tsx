@@ -6,10 +6,29 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { GlassContainerInput } from "../data";
 
 export default function HowWeDoIt() {
-  
-
   const { scrollYProgress } = useScroll();
   const y = useTransform(scrollYProgress, [0, 1], [0, -50]);
+
+  const containerVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.8,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" as const },
+    },
+  };
 
   return (
     <section className="min-h-screen text-white px-5 md:px-10 lg:px-16 py-12 md:py-20 flex flex-col justify-center relative overflow-hidden">
@@ -17,19 +36,29 @@ export default function HowWeDoIt() {
         {/* Left Content Section - Sticky & Parallax */}
         <motion.div
           style={{ y }}
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
           viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
           className="flex flex-col gap-6 w-full md:w-1/2 md:sticky md:top-32"
         >
-          <h4 className="text-blue-400 font-medium uppercase tracking-widest text-sm font-['Inter']">
+          <motion.h4
+            variants={itemVariants}
+            className="text-gray-400 font-medium uppercase tracking-widest text-sm"
+          >
             How we do
-          </h4>
-          <h1 className="font-['Sora'] text-4xl md:text-5xl lg:text-6xl font-extrabold capitalize leading-tight tracking-tight">
+          </motion.h4>
+          <motion.h1
+            variants={itemVariants}
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold capitalize leading-tight tracking-tight"
+          >
             Our proven path to digital transformation
-          </h1>
-          <motion.div whileHover={{ scale: 1.05 }} className="pt-4">
+          </motion.h1>
+          <motion.div
+            variants={itemVariants}
+            whileHover={{ scale: 1.05 }}
+            className="pt-4"
+          >
             <PrimaryButton text="Start Your Journey" />
           </motion.div>
         </motion.div>

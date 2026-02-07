@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 interface ServicesCardProps {
@@ -22,8 +22,20 @@ const ServicesCard = ({
   setHoveredIndex,
 }: ServicesCardProps) => {
   const [expanded, setExpanded] = useState(false);
-  const isTouchDevice =
-    typeof window !== "undefined" && window.matchMedia("(hover: none)").matches;
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    setIsTouchDevice(window.matchMedia("(hover: none)").matches);
+    setIsDesktop(window.innerWidth >= 1024);
+
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth >= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const isOtherHovered =
     hoveredIndex !== null &&
@@ -32,7 +44,7 @@ const ServicesCard = ({
     hoveredIndex !== index;
 
   return (
-    <div className="relative w-full  lg:w-full   h-[550px] md:h-[280px]  lg:h-[280px]">
+    <div className="relative w-full lg:w-full h-[400px] md:h-[280px] lg:h-[280px]">
       <motion.div
         className={`
           absolute top-0 h-full w-full
@@ -58,7 +70,7 @@ const ServicesCard = ({
           }
         }}
         whileHover={
-          typeof window !== "undefined" && window.innerWidth >= 1024
+          isDesktop
             ? {
                 width: "210%", // Expand over neighbor
                 zIndex: 50,
@@ -67,13 +79,7 @@ const ServicesCard = ({
             : {}
         }
         animate={{
-          width:
-            expanded &&
-            typeof window !== "undefined" &&
-            window.innerWidth >= 768 &&
-            window.innerWidth < 1024
-              ? "210%"
-              : "100%",
+          width: expanded && !isDesktop ? "210%" : "100%",
 
           scale: expanded ? 1.05 : 1,
           transition: { type: "spring", stiffness: 300, damping: 25 },
@@ -88,15 +94,20 @@ const ServicesCard = ({
             <img
               src={image || "../youtube.svg"}
               alt=""
-              className={`w-72 h-72 lg:w-60 lg:h-60 transition-opacity duration-500 ${isOtherHovered ? "opacity-10" : "opacity-100"}`}
+              className={`w-72 h-72 lg:w-60 lg:h-60 transition-opacity duration-500 ${
+                isOtherHovered
+                  ? "opacity-10"
+                  : expanded
+                    ? "opacity-20"
+                    : "opacity-40"
+              }`}
             />
           </div>
 
           <div className="absolute inset-0  bg-transparent transition-colors" />
 
           <div
-            className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300
-    `}
+            className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-300`}
           >
             {/* Title only when not expanded */}
             <div className="group relative">
@@ -110,7 +121,7 @@ const ServicesCard = ({
                 {!expanded && (
                   <h3
                     className={`
-          text-6xl lg:text-3xl font-black uppercase tracking-widest text-center px-4 leading-tight
+          text-3xl md:text-4xl lg:text-3xl font-black uppercase tracking-widest text-center px-4 leading-tight
           ${expanded ? "opacity-0" : "opacity-100"}
         `}
                   >
@@ -123,12 +134,12 @@ const ServicesCard = ({
             {/* Description only when expanded */}
             {expanded && (
               <>
-                <div className=" w-full h-full flex justify-center flex-col p-8 overflow-hidden bg-black">
-                  <h3 className="text-5xl font-bold tracking-widest uppercase mb-4 whitespace-nowrap">
+                <div className="w-full h-full flex justify-center flex-col p-8 overflow-hidden bg-black/80 backdrop-blur-md">
+                  <h3 className="text-2xl md:text-3xl font-bold tracking-widest uppercase mb-4 whitespace-nowrap">
                     {title}
                   </h3>
 
-                  <p className="text-[42px] text-gray-300 leading-relaxed line-clamp-4">
+                  <p className="text-base md:text-xl text-gray-300 leading-relaxed line-clamp-4">
                     {description}
                   </p>
                 </div>
@@ -137,17 +148,17 @@ const ServicesCard = ({
           </div>
           <div className={`w-full h-fit `}>
             <div
-              className={` group-hover:hidden absolute bottom-10 right-10 ${expanded ? "bg-[#4F00DF]" : "bg-[#4F00DF]"} mt-6 lg:w-14 lg:h-14 w-18 h-18  flex items-center justify-center rounded-full border border-white/30 hover:bg-white hover:text-black transition-all`}
+              className={`group-hover:hidden absolute bottom-10 right-10 ${expanded ? "bg-[#4F00DF]" : "bg-[#4F00DF]"} mt-6 lg:w-14 lg:h-14 w-14 h-14 flex items-center justify-center rounded-full border border-white/30 hover:bg-white hover:text-black transition-all`}
             >
               <span
-                className={`${expanded ? "hidden" : "inline"} text-4xl lg:text-2xl`}
+                className={`${expanded ? "hidden" : "inline"} text-2xl lg:text-2xl`}
               >
                 {">"}
               </span>
 
               {/* Show "x" only when expanded */}
               <span
-                className={`${expanded ? "inline " : "hidden"} text-4xl  text-center lg:text-2xl`}
+                className={`${expanded ? "inline " : "hidden"} text-2xl text-center lg:text-2xl`}
               >
                 X
               </span>

@@ -33,14 +33,14 @@ export default function LandingHerosection() {
       <motion.div className="flex flex-col items-center gap-10">
         <motion.h1
           variants={itemVariants}
-          className="text-white text-center font-['Sora'] text-[36px] md:text-[65px] lg:text-[85px] font-bold leading-[110%] capitalize max-w-5xl"
+          className="text-white text-center text-[36px] md:text-[65px] lg:text-[80px] font-bold leading-[110%] capitalize max-w-5xl"
         >
           Transform your digital potential with precision
         </motion.h1>
 
         <motion.p
           variants={itemVariants}
-          className="text-gray-300 text-center font-['McLaren'] text-sm md:text-xl lg:text-[22px] font-normal leading-relaxed capitalize px-3 md:px-10 lg:px-20 max-w-4xl"
+          className="text-gray-300 text-center text-sm md:text-xl lg:text-[18px] font-normal leading-relaxed capitalize px-3 md:px-10 lg:px-20 max-w-4xl"
         >
           We craft innovative technological solutions that drive business
           performance.

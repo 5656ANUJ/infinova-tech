@@ -66,11 +66,14 @@ export default function PricingCard({
       animate={controls}
       className={`
         group hover:scale-105
-         w-[800px] lg:w-[400px] h-250  md:rounded-3xl  lg:rounded-[32px] rounded-[80px] p-4 border lg:border-3 border-4  border-[#4F46E5]
-        bg-[#1A1034] text-white relative overflow-hidden
-        shadow-[0_0_40px_rgba(118,75,255,0  )]
-        px-18 py-12 md:py-6 md:pl-16 md:pr-16  lg:px-9 lg:py-2 
-        flex flex-col  lg:h-[520px] justify-center gap-6  md:w-fit md:h-[720px]
+        w-full max-w-[400px] h-full
+        rounded-3xl lg:rounded-[32px]
+        p-6 lg:p-9
+        border-4 lg:border-3 border-[#4F46E5]
+        bg-[#1A1034] text-white
+        relative overflow-hidden
+        shadow-[0_0_40px_rgba(118,75,255,0)]
+        flex flex-col justify-center gap-6
         ${
           isPopular
             ? " border border-[#683FFF]  bg-white/5 p-20 backdrop-blur-sm  hover:bg-white/10 hover:shadow-2xl hover:shadow-[#4e46e570] transition-all duration-300 cursor-pointer"
@@ -79,11 +82,11 @@ export default function PricingCard({
       `}
     >
       {isPopular ? (
-        <div className="absolute md:text-xl md:-right-5 md:top-8 text-3xl lg:text-xs  right-0 top-20 lg:right-1 lg:top-9 -translate-x-1/2 bg-[#683FFF] text-white font-bold px-4 py-1 rounded-full shadow-lg">
+        <div className="absolute top-8 right-0 md:right-5 -translate-x-1/2 md:translate-x-0 bg-[#683FFF] text-white font-bold px-4 py-1 rounded-full shadow-lg text-sm lg:text-xs">
           Popular
         </div>
       ) : (
-        <div className="absolute md:text-xl md:-right-2 md:top-8 right-0 top-20 lg:right-1 lg:top-9 -translate-x-1/2 bg-white/15 text-white text-3xl lg:text-xs font-bold px-4 py-1 rounded-full shadow-lg">
+        <div className="absolute top-8 right-0 md:right-2 -translate-x-1/2 md:translate-x-0 bg-white/15 text-white font-bold px-4 py-1 rounded-full shadow-lg text-sm lg:text-xs">
           Basic
         </div>
       )}
@@ -91,63 +94,52 @@ export default function PricingCard({
       {/* Header */}
       <motion.div
         variants={itemVariants}
-        className="space-y-3  pt-4 lg:pt-4 md:pt-0 flex-shrink-0  "
+        className="space-y-3 pt-4 flex-shrink-0"
       >
-        <h3 className="text-[60px] lg:text-3xl md:text-[42px] font-bold tracking-tight lg:mt-2">
+        <h3 className="text-3xl md:text-4xl lg:text-3xl font-bold tracking-tight">
           {title}
         </h3>
-        <p className=" text-[48px] md:text-[40px] lg:text-[30px] font-bold text-green-500 leading-tight group-hover:text-[3xl] mb-10 lg:mb-2 transition-all ">
+        <p className="text-4xl md:text-[40px] lg:text-[30px] font-bold text-green-500 leading-tight group-hover:text-3xl transition-all">
           {price}
         </p>
       </motion.div>
 
-      {/* Scrollable Features List */}
-      <motion.div
-        variants={containerVariants}
-        className="flex-1   md:-mt-6 lg:mt-0 lg:px-0 md:px-0  overflow-y-scroll scrollbar-hide space-y-4  px-1 lg:h-5 h-5 " // ← SCROLLABLE + HIDE SCROLLBAR
-        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-      >
-        <style jsx>{`
-          .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-          }
-          .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-          }
-        `}</style>
-        {features.map((item, idx) => (
-          <motion.li
-            key={idx}
-            variants={itemVariants}
-            className="flex items-start gap-3  text-[38px] lg:text-[20px] relative pl-0 "
-          >
-            {tickMarkSvg ? (
-              <div
-                className="flex-shrink-0 w-5 h-5 mt-0.5"
-                dangerouslySetInnerHTML={{ __html: tickMarkSvg }}
-              />
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="md:h-8 lg:h-5 h-11 mr-4 lg:mr-0 lg:w-5 w-11 lg:mt-2 mt-2 flex-shrink-0 text-[#00A018]"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+      {/* Features List */}
+      <motion.div variants={containerVariants} className="flex-1 space-y-4">
+        <ul className="space-y-4">
+          {features.map((item, idx) => (
+            <motion.li
+              key={idx}
+              variants={itemVariants}
+              className="flex items-start gap-3 text-lg lg:text-[20px] relative pl-0"
+            >
+              {tickMarkSvg ? (
+                <div
+                  className="flex-shrink-0 w-5 h-5 mt-0.5"
+                  dangerouslySetInnerHTML={{ __html: tickMarkSvg }}
                 />
-              </svg>
-            )}
-            <span className="flex-1  lg:text-xl text:2xl md:text-3xl">
-              {item}
-            </span>
-          </motion.li>
-        ))}
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="w-5 h-5 mt-1 flex-shrink-0 text-[#00A018]"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
+              )}
+              <span className="flex-1 text-base md:text-xl lg:text-xl">
+                {item}
+              </span>
+            </motion.li>
+          ))}
+        </ul>
       </motion.div>
 
       {/* Button */}

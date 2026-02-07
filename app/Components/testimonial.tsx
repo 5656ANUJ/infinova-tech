@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState, useCallback } from "react";
+import { motion } from "framer-motion";
 
 interface TestimonialItem {
   name: string;
@@ -144,9 +145,15 @@ export default function Testimonial({
     <section className="min-h-[100vh] w-full lg:min-h-fit lg:max-w-[100vw] mt-20 lg:mt-0 lg:mb-0 mb-20 md:mt-16 lg:p-20 overflow-hidden">
       <div className="min-h-fit w-[1000px] lg:min-w-full lg:rounded-[50px] mb-16 lg:mb-0 ">
         <div className="p-10 mb-30 md:mb-12 lg:mb-18 lg:w-fit w-full md:w-full">
-          <h1 className="text-2xl lg:text-5xl md:text-4xl md:text-center font-bold text-center text-white bg-clip-text">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-2xl lg:text-5xl md:text-4xl md:text-center font-bold text-center text-white bg-clip-text"
+          >
             TESTIMONIALS
-          </h1>
+          </motion.h1>
         </div>
 
         <div

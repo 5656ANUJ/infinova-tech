@@ -15,17 +15,16 @@ export default function Whoweare() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className="text-gray-400 text-xs md:text-sm lg:text-base font-medium uppercase tracking-wider font-['Inter']"
+        className="text-gray-400 text-xs md:text-sm lg:text-base font-medium uppercase tracking-wider"
       >
         Who We Are
       </motion.h3>
 
-      <h1 className="text-white text-center font-['Sora'] text-2xl md:text-4xl lg:text-5xl font-bold leading-tight capitalize max-w-4xl">
-        Innovative Technology Meets
-      Human Creativity
+      <h1 className="text-white text-center text-2xl md:text-4xl lg:text-5xl font-bold leading-tight capitalize max-w-4xl">
+        Innovative Technology Meets Human Creativity
       </h1>
 
-      <p className="text-gray-300 text-center font-['McLaren'] text-sm md:text-lg lg:text-xl leading-relaxed max-w-3xl">
+      <p className="text-gray-300 text-center text-sm md:text-lg lg:text-lg leading-relaxed max-w-3xl">
         Infinova Technologies is a future-focused innovation company operating
         at the intersection of IT, automation, and advanced engineering —
         partnering with industries and visionaries to build what’s next in
