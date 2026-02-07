@@ -10,13 +10,13 @@ export default function AboutUs() {
       <section className="m-5 md:m-8 lg:m-10">
         <AboutusHeroSec/>
       </section>
-      <section>
+      <section className="m-5 md:m-8 lg:m-10">
         <AboutusInfoSec1/>
       </section>
-      <section>
+      <section className="m-5 md:m-8 lg:m-10">
         <AboutusInfoSec2/>
       </section>
-      <section>
+      <section className="m-5 md:m-8 lg:m-10">
         <AboutusInfoSec3/>
       </section>
 

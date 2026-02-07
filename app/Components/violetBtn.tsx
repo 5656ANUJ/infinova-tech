@@ -1,12 +1,12 @@
 import React from 'react';
 
-interface GlowButtonProps {
+interface VioletBtnProps {
   text: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   className?: string;
 }
 
-export default function GlowButton({ text, onClick, className = "" }: GlowButtonProps) {
+export default function VioletBtn({ text, onClick, className = "" }: VioletBtnProps) {
   return (
     <button
       onClick={onClick}

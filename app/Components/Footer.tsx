@@ -1,150 +1,163 @@
 "use client";
 import Link from "next/link";
+import GlowButton from "./GlowBtn";
+import { motion } from "framer-motion";
+
+const QUICK_LINKS = [
+  { name: "Services", href: "/services" },
+  { name: "Projects", href: "/projects" },
+  { name: "About Us", href: "/aboutus" },
+  { name: "Contact us", href: "/contact" },
+];
+
+const COMPANY_LINKS = [
+  { name: "Careers", href: "/careers" },
+  { name: "Blog", href: "/blog" },
+  { name: "Privacy Policies", href: "/privacy" },
+  { name: "Terms & Conditions", href: "/terms" },
+];
+
+const CONNECT_LINKS = [
+  { name: "Instagram", href: "#", icon: "/Instagram.svg" },
+  { name: "X", href: "#", icon: "/X.svg" },
+  { name: "LinkedIn", href: "#", icon: "/LinkedIn.svg" },
+  { name: "Youtube", href: "#", icon: "/Youtube.svg" },
+];
+
+const LEGAL_LINKS = [
+  { name: "Privacy policy", href: "/privacy" },
+  { name: "Terms of service", href: "/terms" },
+  { name: "Cookie settings", href: "#" },
+];
 
 export default function Footer() {
   return (
-    // bg-[#120033]"
-    <footer className="w-full py-10 px-6  lg:px-24 md:mt-24 lg:mt-0">
-      <hr className="" />
+    <footer className="w-full relative overflow-hidden bg-[#000220] text-gray-300">
+      {/* Top Gradient Border */}
+      <div className="absolute top-0 left-0 right-0 h-px bg-linear-to-r from-transparent via-white/20 to-transparent" />
 
-      {/* main footer */}
-      {/* left div */}
-      <div className=" p-10 grid lg:grid-cols-2 mt-16 lg:mt-6">
-        <div className=" place-items-center lg:place-items-stretch h-full w-full grid grid-cols-1 lg:grid-cols-1">
-          <img
-            src="./company_logo.svg"
-            alt="logo"
-            className="w-90 h-fit lg:h-fit lg:w-70  pb-3  "
-          />
-          <p className="text-3xl lg:text-[18px]">
-            Stay ahead with our latest tech insights and service updates
-          </p>
-          {/* email */}
-          <div className="flex gap-4 lg:gap-2 mt-10  w-full lg:pr-10 lg:px-0 px-20 ">
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              className="h-22 lg:h-12 w-full border border-white rounded-[50px] mt-2 pl-4 placeholder:text-[30px] pt-2 lg:pt-0 lg:placeholder:text-[16px] focus:bg-white/10 focus:border-amber-200 "
-            />
-            <button
-              type="submit"
-              className="text-black font-semibold text-2xl lg:text-[16px] h-22 lg:h-12 w-fit bg-white  border border-white rounded-[20px] mt-2 p-8 lg:p-2 flex items-center justify-center"
-            >
-              Subscribe
-            </button>
-          </div>
-          <p className=" w-fit  lg:w-135 mt-2 lg:text-sm text-[24px] ">
-            By subscribing, you agree to our privacy policy and email
-            communications
-          </p>
-        </div>
+      <div className="w-full max-w-7xl mx-auto px-6 py-16 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+          {/* Brand & Newsletter Section */}
+          <div className="lg:col-span-5 flex flex-col items-center lg:items-start space-y-8">
+            <Link href="/" className="inline-block">
+              <img
+                src="/InfinovaLogo.png"
+                alt="Infinova Logo"
+                className="h-10 w-auto object-contain"
+              />
+            </Link>
 
-        {/* right div */}
-        <div className=" max-h-full w-full grid grid-cols-2 lg:grid-cols-3 mb-10 lg:mb-0 mt-10 lg:mt-0 ">
-          {/* Quick links */}
-          <div className="pt-16 lg:pt-0">
-            <h3 className="font-semibold text-[36px] md:text-[30px] lg:text-lg text-white pb-8 lg:pb-4 lg:text-center md:text-left text-left">
-              Quick Links
-            </h3>
-            <ul className="space-y-5 text-white/90 text-[32px] md:text-[28px] lg:text-sm  ">
-              {" "}
-              {/* List BELOW header */}
-              <li className="hover:text-white cursor-pointer transition-all py-1 px-2 rounded hover:bg-white/20 w-full lg:w-[150px] text-left md:text-left lg:text-center  lg:ml-6 ">
-                <Link href="/services">Services</Link>
-              </li>
-              <li className="hover:text-white cursor-pointer transition-all py-1 px-2 rounded hover:bg-white/20 w-full lg:w-[150px] text-left md:text-left lg:text-center lg:ml-6 ">
-                <Link href="/projects">Projects</Link>
-              </li>
-              <li className="hover:text-white cursor-pointer transition-all py-1 px-2 rounded hover:bg-white/20 w-full lg:w-[150px] text-left md:text-left lg:text-center lg:ml-6 ">
-                <Link href="/aboutus">About Us</Link>
-              </li>
-              <li className="hover:text-white  cursor-pointer transition-all py-1 px-2 rounded hover:bg-white/20 w-full lg:w-[150px] text-left md:text-left lg:text-center lg:ml-6 ">
-                <Link href="/contact">Contact us</Link>
-              </li>
-            </ul>
+            <p className="text-center lg:text-left text-lg md:text-xl font-light text-white/90 max-w-md mx-auto lg:mx-0">
+              Stay ahead with our latest tech insights and service updates.
+            </p>
+
+            <div className="w-full max-w-md flex flex-col sm:flex-row gap-3">
+              <input
+                type="email"
+                placeholder="Email Address"
+                className="flex-1 w-full px-5 py-3 rounded-full bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:outline-none focus:border-white/30 focus:bg-white/10 transition-all duration-300 backdrop-blur-sm"
+              />
+              <div className="flex justify-center sm:justify-start">
+                <GlowButton text="Subscribe" className="w-full sm:w-auto" />
+              </div>
+            </div>
+
+            <p className="text-xs text-gray-500 text-center lg:text-left max-w-sm">
+              By subscribing, you agree to our privacy policy and email
+              communications.
+            </p>
           </div>
 
-          {/* company */}
-          <div className="pt-16  lg:pt-0   place-items-center  ">
-            <h3 className="font-semibold text-white text-[36px] md:text-[30px] lg:text-lg pb-8 lg:pb-4 text-left w-full pl-18 lg:pl-0 md:pl-24  lg:text-center">
-              Company
-            </h3>
-            <ul className="space-y-5 text-white/80 md:text-[28px]  text-[32px] lg:text-sm text-left lg:text-center">
-              <li className="hover:text-white cursor-pointer py-1 px-2 rounded hover:bg-white/20 transition-all w-full lg:w-[150px] lg:text-center  md:text-left">
-                <Link href="/careers">Careers</Link>
-              </li>
-              <li className="hover:text-white cursor-pointer py-1 px-2 rounded hover:bg-white/20 transition-all w-full lg:w-[150px] lg:text-center md:text-left">
-                <Link href="/blog">Blog</Link>
-              </li>
-              <li className="hover:text-white cursor-pointer py-1 px-2 rounded hover:bg-white/20 transition-all w-full  lg:w-[150px] lg:text-center md:text-left">
-                <Link href="/privacy">Privacy Policies</Link>
-              </li>
-              <li className="hover:text-white cursor-pointer py-1 px-2  rounded hover:bg-white/20 transition-all  w-full  lg:w-[150px] lg:text-center md:text-left">
-                <Link href="/terms">Terms & Conditions</Link>
-              </li>
-            </ul>
-          </div>
+          {/* Links Section */}
+          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-4 mt-8 lg:mt-0">
+            {/* Quick Links */}
+            <div className="flex flex-col items-center lg:items-start space-y-6">
+              <h3 className="font-semibold text-white text-lg tracking-wide">
+                Quick Links
+              </h3>
+              <ul className="space-y-4 flex flex-col items-center lg:items-start">
+                {QUICK_LINKS.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors duration-300 text-base lg:text-sm hover:translate-x-1 inline-block"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* connect with us */}
-          <div className="pt-16 lg:pt-0 place-items-center lg:place-items-start  col-span-2 lg:col-span-1 ">
-            <h3 className="font-semibold text-white text-[36px] md:text-[30px] lg:text-lg pb-8 lg:pb-4  lg:w-full text-center">
-              Connect with Us
-            </h3>
+            {/* Company */}
+            <div className="flex flex-col items-center lg:items-start space-y-6">
+              <h3 className="font-semibold text-white text-lg tracking-wide">
+                Company
+              </h3>
+              <ul className="space-y-4 flex flex-col items-center lg:items-start">
+                {COMPANY_LINKS.map((link) => (
+                  <li key={link.name}>
+                    <Link
+                      href={link.href}
+                      className="text-gray-400 hover:text-white transition-colors duration-300 text-base lg:text-sm hover:translate-x-1 inline-block"
+                    >
+                      {link.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-            <ul className="space-y-5 text-white/80 md:text-[28px] text-[32px] lg:text-sm text-center w-full lg:w-fit grid lg:grid-cols-1 grid-cols-2 pl-20 lg:pl-0 gap-x-60 items-center justify-items-center ">
-              <li className=" w-full lg:w-[150px] text-center lg:ml-6 lg:pl-7  transition-all hover:text-white cursor-pointer py-1 px-2 rounded hover:bg-white/20  flex flex-row gap-2">
-                <img
-                  src="./Instagram.svg"
-                  alt="instagram"
-                  className="lg:h-fit md:h-fit h-12 w-12 md:w-10 lg:w-fit h-12 w-12 "
-                />
-                Instagram
-              </li>
-              <li className="w-full lg:w-[150px] text-center lg:ml-6 lg:pl-7 hover:text-white transition-allcursor-pointer py-1 px-2 rounded hover:bg-white/20 transition-all  flex flex-row gap-2">
-                <img
-                  src="./X.svg"
-                  alt="instagram"
-                  className="lg:h-fit h-12 w-12 lg:w-fit h-12 w-12 md:w-10 "
-                />
-                X
-              </li>
-              <li className="w-full lg:w-[150px] text-center lg:ml-6 lg:pl-7 hover:text-white transition-allcursor-pointer py-1 px-2 rounded hover:bg-white/20 transition-all  flex flex-row gap-2">
-                <img
-                  src="./LinkedIn.svg"
-                  alt="instagram"
-                  className="lg:h-fit h-12 w-12 lg:w-fit h-12 w-12 md:w-10 "
-                />
-                LinkedIn
-              </li>
-              <li className="w-full lg:w-[150px]  lg:ml-6 lg:pl-7 hover:text-white transition-allcursor-pointer py-1 px-2 rounded hover:bg-white/20 transition-all flex flex-row gap-2">
-                <img
-                  src="./Youtube.svg"
-                  alt="instagram"
-                  className="lg:h-fit h-12 w-12 lg:w-fit h-12 w-12 md:w-10 "
-                />
-                Youtube
-              </li>
-            </ul>
+            {/* Connect */}
+            <div className="flex flex-col items-center lg:items-start space-y-6">
+              <h3 className="font-semibold text-white text-lg tracking-wide">
+                Connect with Us
+              </h3>
+              <ul className="space-y-4 w-full">
+                {CONNECT_LINKS.map((link) => (
+                  <li
+                    key={link.name}
+                    className="flex justify-center lg:justify-start"
+                  >
+                    <Link
+                      href={link.href}
+                      className="group flex items-center gap-3 text-gray-400 hover:text-white transition-all duration-300 w-fit p-2 rounded-lg hover:bg-white/5"
+                    >
+                      <div className="relative w-6 h-6 flex items-center justify-center transition-transform group-hover:scale-110">
+                        <img
+                          src={link.icon}
+                          alt={link.name}
+                          className="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
+                        />
+                      </div>
+                      <span className="text-base lg:text-sm font-medium">
+                        {link.name}
+                      </span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
 
-      <hr className="mt-10" />
-      <div className="flex flex-col  lg:flex-row justify-between items-center gap-6 pt-8">
-        <p className="text-2xl text-gray-400 text-center lg:text-left order-2 lg:order-1 lg:text-sm">
-          © 2026 Startup Service. All rights reserved
-        </p>
-        <div className="flex flex-wrap gap-4 lg:gap-8 justify-between lg:justify-end order-1 lg:order-2">
-          <p className="underline cursor-pointer hover:text-white transition-colors text-2xl lg:text-sm">
-            Privacy policy
+        {/* Bottom Bar */}
+        <div className="mt-16 pt-8 border-t border-white/10 flex flex-col-reverse md:flex-row justify-between items-center gap-6 text-sm text-gray-500">
+          <p>
+            © {new Date().getFullYear()} Infinova Tech. All rights reserved.
           </p>
-          <p className="underline cursor-pointer hover:text-white transition-colors text-2xl lg:text-sm">
-            Terms of service
-          </p>
-          <p className="underline cursor-pointer hover:text-white transition-colors text-2xl lg:text-sm">
-            Cookie settings
-          </p>
+          <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+            {LEGAL_LINKS.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="hover:text-white transition-colors duration-300"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </footer>

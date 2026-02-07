@@ -2,7 +2,10 @@
 import { motion } from "framer-motion";
 import Typewriter from "typewriter-effect";
 
-export default function Hero({
+import VioletBtn from "../Components/violetBtn";
+import TextType from "../Components/Typewriter";
+
+export default function WebDev({
   heroMessage,
   typewriterStrings,
   heroImage,
@@ -18,8 +21,8 @@ export default function Hero({
   jsImg: string;
 }) {
   return (
-    <section className="w-full  bg-[#1A0033] text-white px-4 sm:px-6 lg:px-12 py-12  flex flex-col lg:items-center mb-20 lg:mb-0 mt-[-30] lg::mt-0">
-      <div className="w-full  max-w-7xl mx-auto  min-h-[100vh]  flex-1 flex flex-col items-center justify-center gap-12 lg:gap-20 lg:grid lg:grid-cols-2 lg:items-center">
+    <section className="w-full text-white px-4 sm:px-6 lg:px-12 flex flex-col lg:items-center">
+      <div className="w-full max-w-7xl mx-auto h-[calc(100vh-140px)] flex flex-col items-center justify-center gap-8 lg:gap-16 lg:grid lg:grid-cols-2 lg:items-center">
         {/* Mobile */}
         <motion.div
           className="order-1 lg:order-2 w-full lg:flex lg:justify-end  "
@@ -32,7 +35,7 @@ export default function Hero({
             <motion.img
               src={heroImage}
               alt="Hero"
-              className="w-full  md:h-200 h-auto object-contain rounded-xl "
+              className="w-auto h-auto max-h-[100vh] lg:max-h-[100vh] object-contain rounded-xl mx-auto"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
@@ -72,38 +75,33 @@ export default function Hero({
 
         {/* Content - Bottom center on mobile, Left on desktop */}
         <motion.div
-          className=" lg:m-16 md:-m-8 -m-16 order-2 lg:order-1 w-full lg:ml-20 max-w-2xl text-center lg:text-left space-y-6 lg:space-y-12 px-4 lg:px-0"
+          className="order-2 lg:order-1 w-full lg:ml-20 lg:-mt-24 max-w-2xl text-center lg:text-left space-y-6 lg:space-y-8 px-4 lg:px-0"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <h1 className="font-bold text-6xl sm:text-5xl lg:text-6xl leading-tight lg:-mb-[-20px] ">
+          <h1 className="font-semibold text-xl md:text-2xl lg:text-4xl leading-tight ">
             Website For
           </h1>
 
-          <div className="text-8xl sm:text-6xl lg:text-7xl font-bold text-[#8A57FF] mx-auto lg:mx-0 ">
-            <Typewriter
-              options={{
-                strings: typewriterStrings,
-                autoStart: true,
-                loop: true,
-                delay: 75,
-                deleteSpeed: 50,
-              }}
-            />
+          <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A57FF] mx-auto lg:mx-0 ">
+            <TextType 
+  text={typewriterStrings}
+  typingSpeed={75}
+  pauseDuration={1500}
+  showCursor
+  cursorCharacter="_"
+  deletingSpeed={50}
+  variableSpeedEnabled={false}
+  variableSpeedMin={60}
+  variableSpeedMax={120}
+  cursorBlinkDuration={0.5}
+/>
           </div>
 
-          <p className="text-4xl md:text-3xl lg:mt-0 mt-14 sm:text-xl lg:text-2xl text-white leading-relaxed w-fit -mx-30 lg:mx-0 lg:mx-0">
-            {heroMessage}
-          </p>
+          <p className="text-md md:text-lg lg:text-xl">{heroMessage}</p>
 
-          <motion.button
-            className="mx-auto lg:mx-0 mt-8 lg:mt-0 bg-purple-600 hover:bg-purple-700 text-4xl lg:text-2xl font-semibold px-10 py-5 rounded-2xl shadow-2xl hover:shadow-purple-500/25 transition-all duration-300"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.98 }}
-          >
-            Explore
-          </motion.button>
+          <VioletBtn text="Explore" />
         </motion.div>
       </div>
     </section>
