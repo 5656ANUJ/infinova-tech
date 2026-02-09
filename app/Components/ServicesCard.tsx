@@ -92,7 +92,7 @@ const ServicesCard = ({
         >
           <div className="absolute  inset-0 justify-center grid place-items-center  overflow-hidden transition-transform duration-700 group-hover:scale-110 bg-black">
             <img
-              src={image || "../youtube.svg"}
+              src={image || "/Youtube.svg"}
               alt=""
               className={`w-72 h-72 lg:w-60 lg:h-60 transition-opacity duration-500 ${
                 isOtherHovered

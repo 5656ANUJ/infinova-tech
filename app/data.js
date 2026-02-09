@@ -25,13 +25,13 @@ export const AboutcardInput = [
     title: "Professional Team",
     description:
       "A dependable team that knows how to get things done.We blend creativity with solid technical skills.",
-    src: "./assets/professionalteam.png",
+    src: "/professionalteam.png",
   },
   {
     title: "Target Oriented",
     description:
       "Every project follows a clear goal.Your targets guide our direction..",
-    src: "./",
+    src: "/targetoriented.png",
   },
   {
     title: "Professional Team",
@@ -205,8 +205,7 @@ export const WhychooseusData = [
   },
   {
     title: "No More Project Delays",
-    description:
-      "Your website won’t be stuck waiting for content.",
+    description: "Your website won’t be stuck waiting for content.",
     icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-gqcPFadwUlUpL8ajC5Ap9ZN7a6JCTu.png&w=1000&q=75",
   },
   {
@@ -229,7 +228,6 @@ export const WhychooseusData = [
     description: "Content that speaks your industry’s language.",
     icon: "/awarness.png",
   },
-
 ];
 
 export const testimonialData = [
@@ -358,8 +356,7 @@ export const UiUxProcessSteps = [
 export const ContentResearchProcessSteps = [
   {
     title: "Requirement Understanding",
-    description:
-      "We understand your business, audience, and goals.",
+    description: "We understand your business, audience, and goals.",
   },
   {
     title: "Research & Collection",
