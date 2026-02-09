@@ -1,11 +1,10 @@
 "use client";
 import { motion } from "framer-motion";
-import Typewriter from "typewriter-effect";
-
 import VioletBtn from "../Components/violetBtn";
 import TextType from "../Components/Typewriter";
 
-export default function WebDev({
+export default function ServicesHeroSec({
+  heroTitle,
   heroMessage,
   typewriterStrings,
   heroImage,
@@ -13,6 +12,7 @@ export default function WebDev({
   mongoImg,
   jsImg,
 }: {
+  heroTitle: string;
   heroMessage: string;
   typewriterStrings: string[];
   heroImage: string;
@@ -35,7 +35,7 @@ export default function WebDev({
             <motion.img
               src={heroImage}
               alt="Hero"
-              className="w-auto h-auto max-h-[100vh] lg:max-h-[100vh] object-contain rounded-xl mx-auto"
+              className="w-auto h-auto max-h-[80vh] lg:max-h-[90vh] object-contain rounded-xl mx-auto"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
@@ -49,24 +49,24 @@ export default function WebDev({
             {/* Overlay Images */}
             <motion.img
               src={reactImg}
-              alt="React"
-              className="absolute  md:-top-14 md:h-86 top-2 left-[-70] w-100 h-100 lg:w-70 lg:h-70 lg:top-[-20] lg:left-[-60] object-contain rounded-full "
+             
+              className="absolute  md:-top-14 md:h-86 top-2 left-[-70] w-30 h-30 lg:w-40 lg:h-40 lg:top-[-20] lg:left-[-60] object-contain rounded-full translate-y-10 "
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
             />
 
             <motion.img
               src={mongoImg}
-              alt="MongoDB"
-              className="absolute md:top-60 md:h-86 top-[400px] right-3 lg:right-[-50] lg:top-[250px] w-60 h-60 lg:w-60 lg:h-60 object-contain rounded-full "
+            
+              className="absolute md:top-60 md:h-86 top-[400px] right-3 lg:right-[-50] lg:top-[250px] w-30 h-30 lg:w-30 lg:h-30 object-contain rounded-full "
               animate={{ x: [0, 10, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
             />
 
-            <motion.img
+            <motion.img 
               src={jsImg}
-              alt="JavaScript"
-              className="absolute md:top-4 md:h-86  top-32 right-2 lg:top-20 lg:right-[-10] w-60 h-60 lg:w-50 lg:h-50 object-contain rounded-full"
+             
+              className="absolute md:top-4 md:h-86  top-32 right-2 lg:top-20 lg:right-[-10] w-20 h-20 lg:w-40 lg:h-40 object-contain rounded-full"
               animate={{ rotate: [0, 15, -15, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
             />
@@ -81,7 +81,7 @@ export default function WebDev({
           transition={{ duration: 0.8, delay: 0.3 }}
         >
           <h1 className="font-semibold text-xl md:text-2xl lg:text-4xl leading-tight ">
-            Website For
+            {heroTitle}
           </h1>
 
           <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A57FF] mx-auto lg:mx-0 ">

@@ -5,8 +5,7 @@ export default function MarqueeSection({
 }: {
   active: "ai" | "workflow";
 }) {
-  
-  const items = marqueeData[active];
+  const { left, right } = marqueeData[active];
 
   return (
     <div className="mt-28 overflow-hidden">
@@ -14,10 +13,10 @@ export default function MarqueeSection({
         What You Get
       </h2>
 
-      {/* Row 1 → Left */}
+      {/* Row 1 -> Left */}
       <div className="overflow-hidden whitespace-nowrap mb-8 ">
         <div className="inline-flex gap-16 animate-marquee-left  ">
-          {[...items, ...items].map((item, i) => (
+          {[...left, ...left].map((item, i) => (
             <span
               key={`left-${i}`}
               className="text-lg font-semibold tracking-widest opacity-90"
@@ -28,10 +27,10 @@ export default function MarqueeSection({
         </div>
       </div>
 
-      {/* Row 2 → Right */}
+      {/* Row 2 -> Right */}
       <div className="overflow-hidden whitespace-nowrap">
         <div className="inline-flex gap-16 animate-marquee-right">
-          {[...items, ...items].map((item, i) => (
+          {[...right, ...right].map((item, i) => (
             <span
               key={`right-${i}`}
               className="text-lg font-semibold tracking-widest opacity-90"

@@ -29,7 +29,7 @@ export default function CTAsec() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="flex flex-col justify-center items-start text-left md:flex-row gap-6 md:gap-10 px-5 md:px-10 lg:px-16 w-full max-w-7xl mx-auto"
+      className="flex flex-col justify-center items-start text-left md:flex-row gap-6 md:gap-10 px-5 md:px-10 lg:px-16 w-full max-w-7xl mx-auto mt-10 mb-10"
     >
       <div className="flex-1">
         <motion.h1

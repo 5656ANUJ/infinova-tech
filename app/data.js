@@ -65,20 +65,34 @@ export const GlassContainerInput = [
 ];
 
 export const marqueeData = {
-  ai: [
-    "CONTENT RESEARCH",
-    "AI TRAINING DATA",
-    "NLP OPTIMIZATION",
-    "CONVERSATION FLOWS",
-    "SMART RESPONSES",
-  ],
-  workflow: [
-    "PROCESS AUTOMATION",
-    "SYSTEM INTEGRATION",
-    "TASK SCHEDULING",
-    "ERROR REDUCTION",
-    "PRODUCTIVITY BOOST",
-  ],
+  ai: {
+    left: [
+      "Content Gaps",
+      "Search Intent",
+      "Keyword Clusters",
+      "Topic Authority",
+    ],
+    right: [
+      "Trend Analysis",
+      "Competitor Insights",
+      "Semantic Relevance",
+      "User Engagement",
+    ],
+  },
+  workflow: {
+    left: [
+      "Find what matters",
+      "Rank where it counts",
+      "Streamline Process",
+      "Data-Driven Decisions",
+    ],
+    right: [
+      "Create content that wins",
+      "Automate Research",
+      "Unlock Growth",
+      "Stay Ahead",
+    ],
+  },
 };
 
 export const projects = [
@@ -113,19 +127,19 @@ export const WhatWeBuildInput = [
     title: "Corporate Website",
     description:
       "Professional, responsive websites that build brand credibility, communicate your message, and generate leads.",
-    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-RxT0DOL4eJyUSr2OixezTO36ugwWpB.png&w=1000&q=75",
   },
   {
-    title: "E-Commerce",
+    title: "Portfolio website",
     description:
-      "Scalable online stores with seamless checkout experiences to maximize code-driven sales.",
-    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+      "Showcase your work with stunning, professional portfolio websites that leave a lasting impression.",
+    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-S8fapvHHVMG8xHldh4MExJJeUU0IE1.png&w=1000&q=75",
   },
   {
-    title: "Custom Web Apps",
+    title: "Custom Solution",
     description:
-      "Tailored web applications designed to streamline operations and enhance user engagement.",
-    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+      "Unique web applications built to solve specific business challenges and deliver measurable results.",
+    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-Xn4zIpdB3hSQrwESxcxj7pyruX0bxd.png&w=1000&q=75",
   },
 ];
 
@@ -187,29 +201,35 @@ export const WhychooseusData = [
   {
     title: "Saves Your Time",
     description: "We handle content while you focus on your business.",
-    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+    icon: "/time.png",
   },
   {
-    title: "Expert Support",
+    title: "No More Project Delays",
     description:
-      "Our team is always ready to assist you with any technical needs.",
-    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+      "Your website won’t be stuck waiting for content.",
+    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-gqcPFadwUlUpL8ajC5Ap9ZN7a6JCTu.png&w=1000&q=75",
   },
   {
-    title: "Scalable Solutions",
-    description: "Future-proof architectures that grow with your business.",
-    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+    title: "SEO-Friendly",
+    description: "Every page is optimized for search engines from the start.",
+    icon: "/SEO.png",
   },
   {
-    title: "Cost Effective",
-    description: "Top-tier quality without breaking the bank.",
-    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+    title: "Perfect for UI/UX Designers",
+    description: "Content that matches your design vision.",
+    icon: "/ui.png",
   },
   {
-    title: "Secure & Reliable",
-    description: "Enterprise-grade security standards for all projects.",
-    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+    title: "Startup-Friendly",
+    description: "Affordable packages designed for growing businesses.",
+    icon: "/friendly.png",
   },
+  {
+    title: "Industry-Aware",
+    description: "Content that speaks your industry’s language.",
+    icon: "/awarness.png",
+  },
+
 ];
 
 export const testimonialData = [
@@ -250,26 +270,26 @@ export const testimonialData = [
   },
 ];
 
-export const processSteps = [
+export const WebProcessSteps = [
   {
     title: "Discovery & Planning",
     description:
-      "We start by understanding your business goals, target audience, and project requirements. Our team conducts thorough research and creates a comprehensive roadmap for your project.",
+      "We learn about your goals, audience, and required features to set a clear direction for the project",
   },
   {
-    title: "Design & Prototyping",
+    title: "UI/UX Design",
     description:
-      "Our designers craft stunning, user-centric interfaces that align with your brand identity. We create interactive prototypes to visualize the final product before development begins.",
+      "We craft wireframes and polished visuals that focus on usability, clarity, and brand identity.",
   },
   {
-    title: "Development & Testing",
+    title: "Development & Integration",
     description:
-      "Our expert developers bring designs to life using cutting-edge technologies. We follow agile methodologies and conduct rigorous testing to ensure quality and performance.",
+      "We translate designs into clean, efficient code and connect all necessary third-party services and APIs.",
   },
   {
-    title: "Launch & Support",
+    title: "Launch & Ongoing Support",
     description:
-      "We deploy your project with precision and provide ongoing support and maintenance. Our team ensures smooth operation and continuous optimization for the best results.",
+      "We deploy your project and provide continuous monitoring, updates, and improvements to ensure long-term success.",
   },
 ];
 
@@ -309,5 +329,51 @@ export const servicesArray = [
     description:
       "Leverage cloud infrastructure to scale your business efficiently. We provide cloud migration, deployment, and management services using AWS, Azure, and Google Cloud to ensure reliability and performance.",
     image: "/GraphicDesign.png",
+  },
+];
+
+export const UiUxProcessSteps = [
+  {
+    title: "Ideation and planning",
+    description:
+      "We start by understanding your business goals, target audience, and project requirements. This foundational research helps us define the project scope and create a roadmap for success.",
+  },
+  {
+    title: "Wireframing and prototyping",
+    description:
+      "Our team creates detailed wireframes and interactive prototypes to visualize the user experience. These prototypes allow us to test different layouts and flows, ensuring the final design is intuitive and user-friendly.",
+  },
+  {
+    title: "Visual design and branding",
+    description:
+      "We bring your brand to life with stunning visual designs that capture your brand identity. Our team creates high-fidelity mockups, color palettes, typography, and other visual elements that create a cohesive and engaging user experience.",
+  },
+  {
+    title: "User testing and feedback",
+    description:
+      "We deploy your project and provide continuous monitoring, updates, and improvements to ensure long-term success.",
+  },
+];
+
+export const ContentResearchProcessSteps = [
+  {
+    title: "Requirement Understanding",
+    description:
+      "We understand your business, audience, and goals.",
+  },
+  {
+    title: "Research & Collection",
+    description:
+      "We gather relevant information, including competitor data, industry trends, and audience preferences.",
+  },
+  {
+    title: "Organization",
+    description:
+      "We organize the collected information into a clear, structured format that aligns with your website goals.",
+  },
+  {
+    title: "Final Delivery",
+    description:
+      "We deliver the organized content, including headings, subheadings, descriptions, images, SEO keywords, and structure, ready for your website.",
   },
 ];

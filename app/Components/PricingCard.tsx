@@ -66,18 +66,19 @@ export default function PricingCard({
       animate={controls}
       className={`
         group hover:scale-105
-        w-full max-w-[400px] h-full
-        rounded-3xl lg:rounded-[32px]
-        p-6 lg:p-9
-        border-4 lg:border-3 border-[#4F46E5]
-        bg-[#1A1034] text-white
+        w-full max-w-100 h-full
+        rounded-3xl lg:rounded-4xl
+        p-6 lg:p-10
+        border-2 border-[#4F46E5]
+        bg-[#1A1034]/80 backdrop-blur-xl text-white
         relative overflow-hidden
-        shadow-[0_0_40px_rgba(118,75,255,0)]
-        flex flex-col justify-center gap-6
+        shadow-2xl shadow-[#4f46e5]/20
+        flex flex-col justify-between gap-6
+        transition-all duration-300 cursor-pointer
         ${
           isPopular
-            ? " border border-[#683FFF]  bg-white/5 p-20 backdrop-blur-sm  hover:bg-white/10 hover:shadow-2xl hover:shadow-[#4e46e570] transition-all duration-300 cursor-pointer"
-            : " border border-[#683FFF] bg-white/5 p-20 backdrop-blur-sm hover:bg-white/10 hover:shadow-2xl hover:shadow-[#4e46e570] transition-all duration-300 cursor-pointer"
+            ? "border-[#683FFF] shadow-[#683FFF]/40 hover:shadow-[#683FFF]/60"
+            : "hover:border-[#683FFF] hover:shadow-[#4e46e5]/40"
         }
       `}
     >

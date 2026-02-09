@@ -23,10 +23,7 @@ export default function Testimonial({
   const isPausedRef = useRef(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Early return if no items provided
-  if (!items || items.length === 0) {
-    return null;
-  }
+  // Early return logic moved to end of component after hooks
 
   // Stable scroll detection callback
   const updateActiveIndex = useCallback(() => {
@@ -36,7 +33,7 @@ export default function Testimonial({
     const containerRect = scrollContainer.getBoundingClientRect();
     const containerCenter = containerRect.left + containerRect.width / 2;
 
-    const cards = document.querySelectorAll(".testimonial-card");
+    const cards = scrollContainer.querySelectorAll(".testimonial-card");
     let closestIndex = 0;
     let closestDistance = Infinity;
 
@@ -140,6 +137,10 @@ export default function Testimonial({
       }
     };
   }, [updateActiveIndex]);
+
+  if (!items || items.length === 0) {
+    return null;
+  }
 
   return (
     <section className="min-h-[100vh] w-full lg:min-h-fit lg:max-w-[100vw] mt-20 lg:mt-0 lg:mb-0 mb-20 md:mt-16 lg:p-20 overflow-hidden">
