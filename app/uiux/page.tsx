@@ -16,7 +16,7 @@ export default function UiUxPage() {
           "Prototyping",
           "Visual Design",
         ]}
-        heroImage="/heroimg.png"
+        heroImage="/hero-img.png"
         reactImg="https://img.icons8.com/?size=100&id=8gfeOoqrHqJU&format=png&color=000000"
         mongoImg="https://img.icons8.com/?size=100&id=13631&format=png&color=000000"
         jsImg="https://img.icons8.com/?size=100&id=4VVL78edhbW9&format=png&color=000000"

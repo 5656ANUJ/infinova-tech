@@ -18,7 +18,7 @@ export default function ContentResearch() {
           "Competitor Gaps",
           "Content Gap",
         ]}
-        heroImage="/heroimg.png"
+        heroImage="/hero-img.png"
         reactImg="/bulb.png"
         mongoImg="https://img.icons8.com/?size=100&id=ST8UX0wozRY9&format=png&color=000000"
         jsImg="https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-QPl7zSOxUKmFrWf7nOJIZNsfnurbAG.png&w=1000&q=75"
@@ -26,13 +26,24 @@ export default function ContentResearch() {
 
       {/* <MarqueeSection active="workflow" /> */}
 
-        <TextScrollMarquee className="text-4xl font-bold mt-20">
-          {["Insights", "Trends", "Competitor Gaps", "Content Gap", "High-Impact Keywords ", "Ranking Opportunities ", "Topical Coverage ", "Organic Growth ", "Search Demand ", "Content Priorities "].join("  *  ")}
-        </TextScrollMarquee>
-        <ContentResearchProcess />
-        <WhyChooseUsSec/>
-        <PriceCardContainer/>
-        <Testimonial items={testimonialData}/>
+      <TextScrollMarquee className="text-4xl font-bold mt-20">
+        {[
+          "Insights",
+          "Trends",
+          "Competitor Gaps",
+          "Content Gap",
+          "High-Impact Keywords ",
+          "Ranking Opportunities ",
+          "Topical Coverage ",
+          "Organic Growth ",
+          "Search Demand ",
+          "Content Priorities ",
+        ].join("  *  ")}
+      </TextScrollMarquee>
+      <ContentResearchProcess />
+      <WhyChooseUsSec />
+      <PriceCardContainer />
+      <Testimonial items={testimonialData} />
     </div>
   );
 }

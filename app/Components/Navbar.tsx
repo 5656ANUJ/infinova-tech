@@ -77,7 +77,7 @@ export default function Navbar() {
             <div className="flex items-center justify-center w-full lg:w-auto z-50">
               <span className="flex items-center gap-2 font-semibold text-white text-base lg:text-lg">
                 <img
-                  src="/InfinovaLogo.png"
+                  src="/infinova-logo.png"
                   alt="Infinova Logo"
                   className="w-20 md:w-40 lg:w-50 h-fit"
                 />
