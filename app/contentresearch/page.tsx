@@ -18,7 +18,7 @@ export default function ContentResearch() {
           "Competitor Gaps",
           "Content Gap",
         ]}
-        heroImage="/hero-img.png"
+        heroImage="https://github.com/5656ANUJ/infinova-tech/blob/master/Public/hero-img.png?raw=true"
         reactImg="/bulb.png"
         mongoImg="https://img.icons8.com/?size=100&id=ST8UX0wozRY9&format=png&color=000000"
         jsImg="https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-QPl7zSOxUKmFrWf7nOJIZNsfnurbAG.png&w=1000&q=75"

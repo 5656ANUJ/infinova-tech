@@ -11,7 +11,7 @@ export default function WebDevPage() {
       <WebDev
         heroMessage="From sleek corporate sites to complex e-commerce platforms, we build fast, secure, and scalable web solutions that drive growth and deliver exceptional user experiences."
         typewriterStrings={["Your Startup", "Your Business", "Your Shop"]}
-        heroImage="/heroimg.png"
+        heroImage="https://github.com/5656ANUJ/infinova-tech/blob/master/Public/hero-img.png?raw=true"
         reactImg="https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000"
         mongoImg="https://img.icons8.com/?size=100&id=bosfpvRzNOG8&format=png&color=000000"
         jsImg="https://img.icons8.com/?size=100&id=PXTY4q2Sq2lG&format=png&color=000000"
