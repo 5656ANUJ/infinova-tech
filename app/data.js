@@ -296,37 +296,37 @@ export const servicesArray = [
     title: "Web Development",
     description:
       "Build stunning, responsive websites and web applications that engage users and drive business growth. Our expert team uses the latest technologies to create scalable, high-performance solutions tailored to your needs.",
-    image: "/Webdev.png",
+    image: "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/Webdev.png?raw=true",
   },
   {
     title: "Mobile Apps",
     description:
       "Create native and cross-platform mobile applications that deliver exceptional user experiences. We build iOS and Android apps that are intuitive, fast, and designed to keep your users engaged.",
-    image: "/Webdev.png",
+    image: "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/Webdev.png?raw=true",
   },
   {
     title: "UI/Ux Design",
     description:
       "Leverage cloud infrastructure to scale your business efficiently. We provide cloud migration, deployment, and management services using AWS, Azure, and Google Cloud to ensure reliability and performance.",
-    image: "/UIUX.png",
+    image: "./Public/UIUX.png",
   },
   {
     title: "Ai Automation",
     description:
       "Leverage cloud infrastructure to scale your business efficiently. We provide cloud migration, deployment, and management services using AWS, Azure, and Google Cloud to ensure reliability and performance.",
-    image: "/AiAutomation.png",
+    image: "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/AiAutomation.png?raw=true",
   },
   {
     title: "Content Research",
     description:
       "Leverage cloud infrastructure to scale your business efficiently. We provide cloud migration, deployment, and management services using AWS, Azure, and Google Cloud to ensure reliability and performance.",
-    image: "/ContentResearch.png",
+    image: "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/ContentResearch.png?raw=true",
   },
   {
     title: "Graphics design",
     description:
       "Leverage cloud infrastructure to scale your business efficiently. We provide cloud migration, deployment, and management services using AWS, Azure, and Google Cloud to ensure reliability and performance.",
-    image: "/GraphicDesign.png",
+    image: "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/GraphicDesign.png?raw=true",
   },
 ];
 
