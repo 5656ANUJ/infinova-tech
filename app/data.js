@@ -181,19 +181,19 @@ export const WhyAidata = [
     title: "Increase Productivity",
     description:
       "Automate repetitive tasks and free up your team to focus on strategic initiatives.",
-    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-wbnxXAuDFvtd34RIJOhynvh2jus0Iw.png&w=320&q=75",
   },
   {
     title: "Reduce Errors",
     description:
       "Minimize human error with precise, automated workflows and intelligent data processing.",
-    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-PI3tVpsvo1RrWccpSuJvwH6AMvZPaR.png&w=320&q=75",
   },
   {
     title: "Scale Faster",
     description:
       "Seamlessly expand your operations without proportional increases in overhead costs.",
-    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-pri3DOVpzgeVvruiQZLb6NooNGyxyV.png&w=1000&q=75",
+    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-YxKlwIcjJqTAeRHzfEN0Qra6tvwzNQ.png&w=320&q=75",
   },
 ];
 
@@ -296,37 +296,43 @@ export const servicesArray = [
     title: "Web Development",
     description:
       "Build stunning, responsive websites and web applications that engage users and drive business growth. Our expert team uses the latest technologies to create scalable, high-performance solutions tailored to your needs.",
-    image: "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/Webdev.png?raw=true",
+    image:
+      "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/Webdev.png?raw=true",
   },
   {
     title: "Mobile Apps",
     description:
       "Create native and cross-platform mobile applications that deliver exceptional user experiences. We build iOS and Android apps that are intuitive, fast, and designed to keep your users engaged.",
-    image: "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/Webdev.png?raw=true",
+    image:
+      "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/Webdev.png?raw=true",
   },
   {
     title: "UI/Ux Design",
     description:
       "Leverage cloud infrastructure to scale your business efficiently. We provide cloud migration, deployment, and management services using AWS, Azure, and Google Cloud to ensure reliability and performance.",
-    image: "./Public/UIUX.png",
+    image:
+      "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/UIUX.png?raw=true",
   },
   {
     title: "Ai Automation",
     description:
       "Leverage cloud infrastructure to scale your business efficiently. We provide cloud migration, deployment, and management services using AWS, Azure, and Google Cloud to ensure reliability and performance.",
-    image: "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/AiAutomation.png?raw=true",
+    image:
+      "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/AiAutomation.png?raw=true",
   },
   {
     title: "Content Research",
     description:
       "Leverage cloud infrastructure to scale your business efficiently. We provide cloud migration, deployment, and management services using AWS, Azure, and Google Cloud to ensure reliability and performance.",
-    image: "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/ContentResearch.png?raw=true",
+    image:
+      "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/ContentResearch.png?raw=true",
   },
   {
     title: "Graphics design",
     description:
       "Leverage cloud infrastructure to scale your business efficiently. We provide cloud migration, deployment, and management services using AWS, Azure, and Google Cloud to ensure reliability and performance.",
-    image: "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/GraphicDesign.png?raw=true",
+    image:
+      "https://github.com/5656ANUJ/infinova-tech/blob/master/Public/GraphicDesign.png?raw=true",
   },
 ];
 
@@ -372,5 +378,27 @@ export const ContentResearchProcessSteps = [
     title: "Final Delivery",
     description:
       "We deliver the organized content, including headings, subheadings, descriptions, images, SEO keywords, and structure, ready for your website.",
+  },
+];
+
+export const AiProcessSteps = [
+  {
+    title: "Discovery & Consultation",
+    description: "We understand your business, goals, and automation needs.",
+  },
+  {
+    title: "Workflow Analysis",
+    description:
+      "We analyze your workflows, identify automation opportunities, and select the right tools.",
+  },
+  {
+    title: "Automation Design",
+    description:
+      "We design and implement custom automation workflows tailored to your specific needs.",
+  },
+  {
+    title: "Support & Evolution",
+    description:
+      "We provide ongoing support, monitoring, and optimization to ensure your automation continues to deliver value.",
   },
 ];

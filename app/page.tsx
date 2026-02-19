@@ -9,7 +9,7 @@ const PriceCardContainer = dynamic(() => import("./Section/PricingComp"));
 const TestimonialSec = dynamic(() => import("./Section/TestimonialSec"));
 const ServicesSec = dynamic(() => import("./Section/ServicesSec"));
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       {/* Hero Section */}
@@ -47,7 +47,6 @@ export default function Home() {
       </section>
 
       {/* Final CTA */}
-
     </>
   );
 }

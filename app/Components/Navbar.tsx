@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import GlowButton from "./GlowBtn";
@@ -76,11 +77,16 @@ export default function Navbar() {
             {/* Logo */}
             <div className="flex items-center justify-center w-full lg:w-auto z-50">
               <span className="flex items-center gap-2 font-semibold text-white text-base lg:text-lg">
-                <img
-                  src="https://github.com/5656ANUJ/infinova-tech/blob/master/Public/infinova-logo.png?raw=true"
-                  alt="Infinova Logo"
-                  className="w-20 md:w-40 lg:w-50 h-fit"
-                />
+                <Link href="/" className="cursor-pointer">
+                  <Image
+                    src="https://github.com/5656ANUJ/infinova-tech/blob/master/Public/infinova-logo.png?raw=true"
+                    alt="Infinova Logo"
+                    width={200}
+                    height={80}
+                    className="w-20 md:w-40 lg:w-50 h-auto"
+                    priority
+                  />
+                </Link>
               </span>
             </div>
 

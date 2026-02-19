@@ -4,6 +4,8 @@ import "./globals.css";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import CTAsec from "./Section/CTAsec";
+import BackgroundLights from "./Components/BackgroundLights";
+import SmoothScroll from "./Components/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,7 +24,8 @@ const sora = Sora({
 
 export const metadata: Metadata = {
   title: "Infinova Technologies",
-  description: "Infinova Technologies is a leading provider of web development, UI/UX design, and digital transformation services.",
+  description:
+    "Infinova Technologies is a leading provider of web development, UI/UX design, and digital transformation services.",
 };
 
 export default function RootLayout({
@@ -35,8 +38,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${sora.variable} antialiased font-sora`}
       >
+        <BackgroundLights />
+        <SmoothScroll />
         <Navbar />
-        {children}
+        <div className="relative z-10 w-full">{children}</div>
         <CTAsec />
         <Footer />
       </body>

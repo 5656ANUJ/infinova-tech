@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import GlowButton from "./GlowBtn";
 import { motion } from "framer-motion";
 
@@ -41,9 +42,11 @@ export default function Footer() {
           {/* Brand & Newsletter Section */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-start space-y-8">
             <Link href="/" className="inline-block">
-              <img
+              <Image
                 src="/InfinovaLogo.png"
                 alt="Infinova Logo"
+                width={150}
+                height={40}
                 className="h-10 w-auto object-contain"
               />
             </Link>
@@ -125,9 +128,11 @@ export default function Footer() {
                       className="group flex items-center gap-3 text-gray-400 hover:text-white transition-all duration-300 w-fit p-2 rounded-lg hover:bg-white/5"
                     >
                       <div className="relative w-6 h-6 flex items-center justify-center transition-transform group-hover:scale-110">
-                        <img
+                        <Image
                           src={link.icon}
                           alt={link.name}
+                          width={24}
+                          height={24}
                           className="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-opacity"
                         />
                       </div>

@@ -5,7 +5,7 @@ import WebProcess from "../Section/webProcess";
 import PriceCardContainer from "../Section/PricingComp";
 import Testimonial from "../Components/testimonial";
 
-export default function WebDevPage() {
+export default async function WebDevPage() {
   return (
     <section>
       <WebDev

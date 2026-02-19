@@ -4,7 +4,7 @@ import ServicesHeroSec from "../Section/servicesHeroSec";
 import UiUxProcess from "../Section/UiUxProcess";
 import Testimonial from "../Components/testimonial";
 
-export default function UiUxPage() {
+export default async function UiUxPage() {
   return (
     <section>
       <ServicesHeroSec

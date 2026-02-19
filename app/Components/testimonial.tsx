@@ -176,34 +176,34 @@ export default function Testimonial({
               <div
                 key={`card-${i}`}
                 data-index={i}
-                className={`testimonial-card flex-none bg-white rounded-4xl mb-12 lg:mb-16 lg:rounded-2xl lg:border lg:border-2 lg:border-black
+                className={`testimonial-card flex-none bg-[#0b0d28] rounded-4xl mb-12 lg:mb-16 lg:rounded-2xl lg:border lg:border-2 lg:border-white/30
                   shadow-[0_12px_20px_rgba(0,0,0,0.25)]
                   overflow-hidden
                   p-6 md:p-8 lg:p-10 lg:max-h-[20rem] lg:min-h-[20rem]
                   w-[160vw] sm:w-[20rem] md:w-[32rem] lg:w-[40rem] 
                   h-auto pb-20 md:pb-0 lg:pb-0  md:h-auto lg:h-[120vh]
                   transition-all duration-700 ease-in-out
-                  ${activeIndex === i % items.length ? "scale-102 opacity-100" : "scale-95 opacity-80 border lg:border-black/30"}
+                  ${activeIndex === i % items.length ? "scale-102 opacity-100" : "scale-95 opacity-80 border lg:border-white/30"}
                 `}
               >
                 <div className="flex items-center lg:items-start mb-6 lg:gap-10 flex-col lg:flex-row gap-8 md:gap-10 h-full  ">
                   <img
                     src={item.avatar || "/default-avatar.png"}
                     alt={item.name}
-                    className={`lg:w-16 lg:h-16 w-32 h-32 md:w-18 md:h-18 rounded-full  object-cover border-4 border-black/30 lg:border-2 transition-transform duration-500 ease-in-out flex-shrink-0 mt-4 lg:mt-0 ${activeIndex === i % items.length ? "scale-105 opacity-100 shadow-lg" : "scale-95 opacity-70"}`}
+                    className={`lg:w-16 lg:h-16 w-32 h-32 md:w-18 md:h-18 rounded-full  object-cover border-4 border-white/30 lg:border-2 transition-transform duration-500 ease-in-out flex-shrink-0 mt-4 lg:mt-0 ${activeIndex === i % items.length ? "scale-105 opacity-100 shadow-lg" : "scale-95 opacity-70"}`}
                   />
                   <div className="flex-1 min-w-0 flex flex-col justify-between h-full">
                     <div>
                       <h3
-                        className={`text-3xl md:text-3xl lg:text-lg font-black text-gray-900 leading-tight transition-opacity duration-700 ease-in-out text-center lg:text-left ${activeIndex === i % items.length ? "opacity-100" : "opacity-70"}`}
+                        className={`text-3xl md:text-3xl lg:text-lg font-black text-white leading-tight transition-opacity duration-700 ease-in-out text-center lg:text-left ${activeIndex === i % items.length ? "opacity-100" : "opacity-70"}`}
                       >
                         {item.name}
                       </h3>
-                      <p className="mt-3 text-2xl md:text-2xl lg:text-sm font-medium text-gray-500 text-center lg:text-left mb-6">
+                      <p className="mt-3 text-2xl md:text-2xl lg:text-sm font-medium text-white text-center lg:text-left mb-6">
                         {item.company}
                       </p>
                       <p
-                        className={`px-8 mt-12 lg:mt-0 lg:px-0 md:px-0 text-[28px] md:text-[28px] lg:text-lg leading-relaxed text-gray-700 transition-opacity duration-700 ease-in-out ${activeIndex === i % items.length ? "opacity-100" : "opacity-70"}`}
+                        className={`px-8 mt-12 lg:mt-0 lg:px-0 md:px-0 text-[28px] md:text-[28px] lg:text-lg leading-relaxed text-white transition-opacity duration-700 ease-in-out ${activeIndex === i % items.length ? "opacity-100" : "opacity-70"}`}
                       >
                         {item.text}
                       </p>
