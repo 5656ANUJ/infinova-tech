@@ -43,7 +43,7 @@ export default function Footer() {
           <div className="lg:col-span-5 flex flex-col items-center lg:items-start space-y-8">
             <Link href="/" className="inline-block">
               <Image
-                src="/InfinovaLogo.png"
+                src="https://github.com/5656ANUJ/infinova-tech/blob/master/Public/infinova-logo.png?raw=true"
                 alt="Infinova Logo"
                 width={150}
                 height={40}

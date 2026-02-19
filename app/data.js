@@ -201,7 +201,7 @@ export const WhychooseusData = [
   {
     title: "Saves Your Time",
     description: "We handle content while you focus on your business.",
-    icon: "/time.png",
+    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-mmxt1FZH1PS1tzvcF8HCVOPaFfFnC4.png&w=1000&q=75",
   },
   {
     title: "No More Project Delays",
@@ -211,22 +211,22 @@ export const WhychooseusData = [
   {
     title: "SEO-Friendly",
     description: "Every page is optimized for search engines from the start.",
-    icon: "/SEO.png",
+    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-QPl7zSOxUKmFrWf7nOJIZNsfnurbAG.png&w=1000&q=75",
   },
   {
     title: "Perfect for UI/UX Designers",
     description: "Content that matches your design vision.",
-    icon: "/ui.png",
+    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-u9XseZliiHeYnbVsSjAHZAI8eYWprC.png&w=1000&q=75",
   },
   {
     title: "Startup-Friendly",
     description: "Affordable packages designed for growing businesses.",
-    icon: "/friendly.png",
+    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-P05fu8WEQj8szOXCHhA0gkgXa66GIU.png&w=1000&q=75",
   },
   {
     title: "Industry-Aware",
     description: "Content that speaks your industry’s language.",
-    icon: "/awarness.png",
+    icon: "https://www.thiings.co/_next/image?url=https%3A%2F%2Flftz25oez4aqbxpq.public.blob.vercel-storage.com%2Fimage-SZwRxUwFHhYBMuheTaw5DRccTnoyXj.png&w=1000&q=75",
   },
 ];
 

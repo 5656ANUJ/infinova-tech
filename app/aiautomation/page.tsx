@@ -21,7 +21,7 @@ export default async function AiAutomationPage() {
           "AI Content",
           "AI Image",
         ]}
-        heroImage="/AiBot.png"
+        heroImage="https://github.com/5656ANUJ/infinova-tech/blob/master/Public/AIBot.png?raw=true"
         reactImg="https://img.icons8.com/?size=100&id=n3QRpDA7KZ7P&format=png&color=000000"
         mongoImg="https://img.icons8.com/?size=100&id=by7K6EO4PeHT&format=png&color=000000"
         jsImg="/n8n_pink+white_logo.png"
