@@ -28,14 +28,14 @@ export default function ServicesHeroSec({
         <motion.div
           className="order-1 lg:order-2 w-full lg:flex lg:justify-end  "
           initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full max-w-4xl h-auto mx-auto">
+          <div className="relative w-full h-auto mx-auto flex justify-center items-center">
             {/* Main Hero Image */}
             {/* Main Hero Image */}
             <motion.div
-              className="w-auto h-auto max-h-[80vh] lg:max-h-[90vh] mx-auto relative"
+              className="w-auto h-auto mx-auto relative"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
@@ -45,7 +45,7 @@ export default function ServicesHeroSec({
                 alt="Hero"
                 width={800}
                 height={800}
-                className="w-auto h-auto object-contain rounded-xl mx-auto"
+                className="w-auto h-[50vh] lg:h-[85vh] object-contain rounded-xl mx-auto"
                 priority
               />
             </motion.div>
