@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 @plugin 'lightswind/plugin';
 :root {
   --background: #ffffff;
@@ -17,6 +17,11 @@
     --background: #000220;
     --foreground: #ededed;
   }
+}
+
+html,
+body {
+  overflow-x: hidden;
 }
 
 body {

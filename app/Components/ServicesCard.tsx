@@ -44,7 +44,7 @@ const ServicesCard = ({
     hoveredIndex !== index;
 
   return (
-    <div className="relative w-full lg:w-full h-[400px] md:h-[280px] lg:h-[280px]">
+    <div className="relative w-full lg:w-full h-[250px] md:h-[280px] lg:h-[280px]">
       <motion.div
         className={`
           absolute top-0 h-full w-full
@@ -79,7 +79,7 @@ const ServicesCard = ({
             : {}
         }
         animate={{
-          width: expanded && !isDesktop ? "210%" : "100%",
+          width: expanded && isDesktop ? "210%" : "100%",
 
           scale: expanded ? 1.05 : 1,
           transition: { type: "spring", stiffness: 300, damping: 25 },
@@ -87,14 +87,14 @@ const ServicesCard = ({
       >
         {/* IMAGE SECTION*/}
         <div
-          className={`relative h-full bg-transparent backdrop-blur-xl  shadow-2xl justify-center min-w-full md:group-hover:min-w-[40%] transition-all duration-500 ease-in-out overflow-hidden flex items-center min-w-full md:group-hover:min-w-[40%]
+          className={`relative h-full bg-transparent backdrop-blur-xl shadow-2xl justify-center min-w-full md:group-hover:min-w-[40%] transition-all duration-500 ease-in-out overflow-hidden flex items-center
            ${isLeft ? "justify-start" : "justify-end"}`}
         >
           <div className="absolute  inset-0 justify-center grid place-items-center  overflow-hidden transition-transform duration-700 group-hover:scale-110 ">
             <img
               src={image || "/Youtube.svg"}
               alt=""
-              className={`w-72 h-72 lg:w-60 lg:h-60 transition-opacity duration-500 ${
+              className={`w-40 h-40 md:w-60 md:h-60 lg:w-60 lg:h-60 transition-opacity duration-500 ${
                 isOtherHovered
                   ? "opacity-10"
                   : expanded
@@ -121,7 +121,7 @@ const ServicesCard = ({
                 {!expanded && (
                   <h3
                     className={`
-          text-3xl md:text-4xl lg:text-3xl font-black uppercase tracking-widest text-center px-4 leading-tight
+          text-xl md:text-4xl lg:text-3xl font-black uppercase tracking-widest text-center px-4 leading-tight
           ${expanded ? "opacity-0" : "opacity-100"}
         `}
                   >
@@ -134,12 +134,12 @@ const ServicesCard = ({
             {/* Description only when expanded */}
             {expanded && (
               <>
-                <div className="w-full h-full flex justify-center flex-col p-8 overflow-hidden bg-black/80 backdrop-blur-md">
-                  <h3 className="text-2xl md:text-3xl font-bold tracking-widest uppercase mb-4 whitespace-nowrap">
+                <div className="w-full h-full flex justify-center flex-col p-4 md:p-8 overflow-hidden bg-black/80 backdrop-blur-md">
+                  <h3 className="text-lg md:text-3xl font-bold tracking-widest uppercase mb-2 md:mb-4 whitespace-nowrap">
                     {title}
                   </h3>
 
-                  <p className="text-base md:text-xl text-gray-300 leading-relaxed line-clamp-4">
+                  <p className="text-xs sm:text-sm md:text-xl text-gray-300 leading-relaxed line-clamp-none md:line-clamp-4 overflow-y-auto">
                     {description}
                   </p>
                 </div>
@@ -151,7 +151,7 @@ const ServicesCard = ({
               className={`group-hover:hidden absolute bottom-10 right-10 ${expanded ? "bg-[#4F00DF]" : "bg-[#4F00DF]"} mt-6 lg:w-14 lg:h-14 w-14 h-14 flex items-center justify-center rounded-full border border-white/30 hover:bg-white hover:text-black transition-all`}
             >
               <span
-                className={`${expanded ? "hidden" : "inline"} text-2xl lg:text-2xl`}
+                className={`${expanded ? "hidden" : "inline"} text-xl lg:text-2xl`}
               >
                 {">"}
               </span>

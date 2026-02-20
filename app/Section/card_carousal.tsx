@@ -45,14 +45,14 @@ export function CardCarousal() {
 
   return (
     <section className=" pb-20 lg:pb-0 md:pb-24 ">
-      <div className="text-center mb-10">
-        <h2 className=" text-[32px] lg:text-xl font-semibold  text-gray-300">
+      <div className="text-center mb-10 px-4">
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300">
           Project Showcase
         </h2>
-        <h3 className="text-9xl md:text-8xl font-black text-white mt-2">
+        <h3 className="text-2xl md:text-4xl lg:text-6xl font-black text-white mt-2">
           Our Design in Action
         </h3>
-        <p className="text-4xl lg:text-xl text-gray-400 mt-4 max-w-5xl mx-auto">
+        <p className="text-base md:text-lg lg:text-xl text-gray-400 mt-4 max-w-5xl mx-auto">
           Explore a selection of UI design projects we've delivered for
           innovative clients across various industries.
         </p>
@@ -76,7 +76,7 @@ export function CardCarousal() {
                       alt={image.alt}
                       width={300}
                       height={300}
-                      className="rounded-lg object-contain w-[600px]"
+                      className="rounded-lg object-contain w-full max-w-[300px]"
                     />
                   </CardContent>
                 </Card>
@@ -84,10 +84,10 @@ export function CardCarousal() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="!hidden lg:!flex lg:h-20   lg:w-20 bg-white border-[6.5px] hover:lg:h-24 hover:lg:w-24 hover:md: border-black text-black rounded-full  transition-all flex items-center justify-center">
+        <CarouselPrevious className="hidden! lg:flex! lg:h-20   lg:w-20 bg-white border-[6.5px] hover:lg:h-24 hover:lg:w-24 hover:md: border-black text-black rounded-full  transition-all items-center justify-center">
           <ChevronLeft className="h-15 w-15" />
         </CarouselPrevious>
-        <CarouselNext className="!hidden lg:!flex lg:h-20   lg:w-20 bg-white  border-[6.5px] hover:lg:h-24 hover:lg:w-24 hover:md: border-black text-black rounded-full  transition-all flex items-center justify-center">
+        <CarouselNext className="hidden! lg:flex! lg:h-20   lg:w-20 bg-white  border-[6.5px] hover:lg:h-24 hover:lg:w-24 hover:md: border-black text-black rounded-full  transition-all items-center justify-center">
           <ChevronRight className="h-20  w-20" />
         </CarouselNext>
       </Carousel>

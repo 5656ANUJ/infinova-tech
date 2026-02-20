@@ -79,10 +79,10 @@ export default function OurWorks() {
     <section className="h-full w-full p-4">
       <div className="bg-brown-500 h-full  w-full p-4 lg:grid lg:grid-cols-[1.5fr_2fr] lg:gap-4 md:space-y-14 space-y-8 lg:space-y-0">
         <div className="h-full w-full space-y-4  ">
-          <h1 className="text-8xl md:text-8xl  lg:text-5xl font-black text-center lg:text-left">
+          <h1 className="text-3xl md:text-5xl lg:text-5xl font-black text-center lg:text-left">
             Our Works
           </h1>
-          <p className="text-4xl md:text-3xl lg:text-xl text-center lg:text-left">
+          <p className="text-base md:text-lg lg:text-xl text-center lg:text-left">
             Whether Small, Medium, Or Big We Offer An Unlimited Design Service
             For Business of All Size
           </p>
@@ -93,7 +93,7 @@ export default function OurWorks() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab as ProjectCategory)}
-              className={`px-4 py-8 lg:py-2 md:py-2 rounded-full text-4xl md:text-3xl lg:text-[18px] font-semibold transition-all ${
+              className={`px-4 py-3 lg:py-2 md:py-2 rounded-full text-sm md:text-base lg:text-[18px] font-semibold transition-all ${
                 activeTab === tab
                   ? "bg-blue-600 text-white shadow-lg"
                   : "text-white hover:bg-blue-400"
@@ -114,14 +114,14 @@ export default function OurWorks() {
                 className="basis-full md:basis-1/2 lg:basis-1/3"
               >
                 <div className="p-1">
-                  <Card className="h-[800px] lg:h-[400px] md:h-[500px]">
+                  <Card className="h-[300px] md:h-[400px] lg:h-[400px]">
                     <CardContent className="flex items-center justify-center p-6">
                       <Image
                         src={image.src}
                         alt={image.alt}
                         width={300}
                         height={300}
-                        className="rounded-lg w-[600px] lg:w-[300px] object-contain"
+                        className="rounded-lg w-full max-w-[300px] object-contain"
                       />
                     </CardContent>
                   </Card>

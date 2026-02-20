@@ -7,8 +7,6 @@ import PriceCardContainer from "../Section/PricingComp";
 import Testimonial from "../Components/testimonial";
 import { testimonialData } from "../data";
 
-
-
 export default async function AiAutomationPage() {
   return (
     <section>
@@ -32,16 +30,19 @@ export default async function AiAutomationPage() {
         enableBlur
         baseRotation={3}
         blurStrength={4}
-        className="mt-20 px-20 text-center text-md md:text-xl lg:text-4xl "
+        className="mt-20 px-5 md:px-20 text-center text-md md:text-xl lg:text-4xl"
       >
-       AI automation is transforming industries by simplifying complex tasks, reducing manual work, and enabling smarter, data-driven decisions. It is now essential for businesses that want to stay competitive and scale efficiently.
+        AI automation is transforming industries by simplifying complex tasks,
+        reducing manual work, and enabling smarter, data-driven decisions. It is
+        now essential for businesses that want to stay competitive and scale
+        efficiently.
       </ScrollReveal>
 
-      <WhyAi/>
-      <AIServices/>
-      <AiProces/>
-      <PriceCardContainer/>
-      <Testimonial items={testimonialData}/>
+      <WhyAi />
+      <AIServices />
+      <AiProces />
+      <PriceCardContainer />
+      <Testimonial items={testimonialData} />
     </section>
   );
 }

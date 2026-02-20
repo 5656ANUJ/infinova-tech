@@ -19,7 +19,7 @@ const ChooseUs = ({ services }: ChooseUsProps) => {
       <div className="max-w-7xl  mx-auto text-center space-y-16 flex flex-col items-center">
         {/* Title */}
         <motion.h2
-          className="text-8xl sm:text-5xl  lg:text-6xl font-black  bg-gradient-to-r from-white via-purple-300 to-blue-300 bg-clip-text text-transparent uppercase tracking-widest"
+          className="text-3xl sm:text-4xl lg:text-6xl font-black bg-gradient-to-r from-white via-purple-300 to-blue-300 bg-clip-text text-transparent uppercase tracking-widest"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

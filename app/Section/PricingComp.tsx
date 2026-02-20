@@ -3,9 +3,9 @@ import PricingCard from "../Components/PricingCard";
 
 export default function PriceCardContainer() {
   return (
-    <div className="w-full min-h-screen h-full py-12 px-6 mb-36 lg:mb-0">
+    <div className="w-full min-h-screen h-full py-12 px-6 mb-12 lg:mb-0">
       <div className="grid place-items-center lg:mb-12">
-        <h1 className="text-xl md:text-3xl lg:text-5xl font-black text-center  lg:mb-16 mb-40 mt-20">
+        <h1 className="text-2xl md:text-3xl lg:text-5xl font-black text-center lg:mb-16 mb-12 mt-10 md:mt-20">
           The Perfect Plan for Your Needs
         </h1>
       </div>

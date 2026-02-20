@@ -22,8 +22,8 @@ export default function ServicesHeroSec({
   jsImg: string;
 }) {
   return (
-    <section className="w-full text-white px-4 sm:px-6 lg:px-12 flex flex-col lg:items-center">
-      <div className="w-full max-w-7xl mx-auto h-[calc(100vh-140px)] flex flex-col items-center justify-center gap-8 lg:gap-16 lg:grid lg:grid-cols-2 lg:items-center">
+    <section className="relative overflow-hidden w-full text-white px-4 sm:px-6 lg:px-12 flex flex-col lg:items-center">
+      <div className="w-full max-w-7xl mx-auto min-h-[calc(100vh-140px)] flex flex-col items-center justify-center py-10 gap-8 lg:gap-16 lg:grid lg:grid-cols-2 lg:items-center">
         {/* Mobile */}
         <motion.div
           className="order-1 lg:order-2 w-full lg:flex lg:justify-end  "
@@ -31,7 +31,7 @@ export default function ServicesHeroSec({
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8 }}
         >
-          <div className="relative w-full h-auto mx-auto flex justify-center items-center">
+          <div className="relative w-full h-auto mx-auto flex justify-center items-center overflow-hidden">
             {/* Main Hero Image */}
             {/* Main Hero Image */}
             <motion.div
@@ -45,19 +45,19 @@ export default function ServicesHeroSec({
                 alt="Hero"
                 width={800}
                 height={800}
-                className="w-auto h-[50vh] lg:h-[85vh] object-contain rounded-xl mx-auto"
+                className="w-auto h-56 md:h-[50vh] lg:h-[85vh] object-contain rounded-xl mx-auto"
                 priority
               />
             </motion.div>
             <div className="lg:hidden  md:grid md:place-items-center md:space-y-2.5 ">
-              <hr className="md:h-11 md:w-full w-full h-11 border-none bg-gradient-to-b from-purple-400/30 to-transparent rounded-3xl" />
+              <hr className="md:h-11 md:w-full w-full h-11 border-none bg-linear-to-b from-purple-400/30 to-transparent rounded-3xl" />
               {/* <hr className="md:h-1.5 md:w-[calc(100%-36px)] rounded-2xl bg-purple-700" />
                             <hr className="md:h-1 md:w-[calc(100%-81px)] rounded-2xl bg-purple-500" /> */}
             </div>
 
             {/* Overlay Images */}
             <motion.div
-              className="absolute  md:-top-14 md:h-86 top-2 left-[-70] w-30 h-30 lg:w-40 lg:h-40 lg:top-[-20] lg:left-[-60] translate-y-10 "
+              className="absolute md:-top-14 top-2 left-0 lg:-left-15 w-16 h-16 md:w-20 md:h-20 lg:w-30 lg:h-30 lg:-top-5 translate-y-10"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
             >
@@ -71,7 +71,7 @@ export default function ServicesHeroSec({
             </motion.div>
 
             <motion.div
-              className="absolute md:top-60 md:h-86 top-[400px] right-3 lg:right-[-50] lg:top-[250px] w-30 h-30 lg:w-30 lg:h-30"
+              className="absolute md:top-60 top-[60%] right-0 lg:-right-12.5 lg:top-62.5 w-16 h-16 md:w-20 md:h-20 lg:w-30 lg:h-30"
               animate={{ x: [0, 10, 0] }}
               transition={{ duration: 3, repeat: Infinity }}
             >
@@ -85,7 +85,7 @@ export default function ServicesHeroSec({
             </motion.div>
 
             <motion.div
-              className="absolute md:top-4 md:h-86  top-32 right-2 lg:top-20 lg:right-[-10] w-20 h-20 lg:w-40 lg:h-40"
+              className="absolute md:top-4 top-24 right-2 lg:top-20 lg:-right-2.5 w-16 h-16 md:w-20 md:h-20 lg:w-40 lg:h-40"
               animate={{ rotate: [0, 15, -15, 0] }}
               transition={{ duration: 4, repeat: Infinity }}
             >
@@ -111,7 +111,7 @@ export default function ServicesHeroSec({
             {heroTitle}
           </h1>
 
-          <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#8A57FF] mx-auto lg:mx-0 ">
+          <div className="text-xl md:text-3xl lg:text-5xl font-bold text-[#8A57FF] mx-auto lg:mx-0">
             <TextType
               text={typewriterStrings}
               typingSpeed={75}

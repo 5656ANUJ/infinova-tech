@@ -66,7 +66,7 @@ export default function PricingCard({
       animate={controls}
       className={`
         group hover:scale-105
-        w-full max-w-100 h-full
+        w-full max-w-sm h-full
         rounded-3xl lg:rounded-4xl
         p-6 lg:p-10
         border-2 border-[#4F46E5]
@@ -97,10 +97,10 @@ export default function PricingCard({
         variants={itemVariants}
         className="space-y-3 pt-4 flex-shrink-0"
       >
-        <h3 className="text-3xl md:text-4xl lg:text-3xl font-bold tracking-tight">
+        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold tracking-tight">
           {title}
         </h3>
-        <p className="text-4xl md:text-[40px] lg:text-[30px] font-bold text-green-500 leading-tight group-hover:text-3xl transition-all">
+        <p className="text-2xl md:text-3xl lg:text-[30px] font-bold text-green-500 leading-tight group-hover:text-2xl lg:group-hover:text-3xl transition-all">
           {price}
         </p>
       </motion.div>
@@ -135,7 +135,7 @@ export default function PricingCard({
                   />
                 </svg>
               )}
-              <span className="flex-1 text-base md:text-xl lg:text-xl">
+              <span className="flex-1 text-sm md:text-base lg:text-xl">
                 {item}
               </span>
             </motion.li>

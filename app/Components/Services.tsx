@@ -59,7 +59,7 @@ const Services = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3, duration: 0.6 }}
-          className="text-2xl md:text-3xl lg:text-5xl font-semibold mb-4"
+          className="text-xl md:text-3xl lg:text-5xl font-semibold mb-4"
         >
           Digital Solutions That Power Modern Businesses
         </motion.h1>
@@ -68,7 +68,7 @@ const Services = ({
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.4, duration: 0.6 }}
-          className="text-lg md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed"
+          className="text-sm md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed"
         >
           We engineer breakthrough technologies that transform how companies
           operate and compete in the digital landscape.

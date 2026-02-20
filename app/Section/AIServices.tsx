@@ -19,12 +19,12 @@ export default function AIServices() {
       </div>
 
       {/* Layout */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-3xl mx-auto items-start lg:mr-[420px]">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-5xl mx-auto items-start px-6">
         {/* Tabs */}
         <ServiceTabs active={active} setActive={setActive} />
 
         {/* Card */}
-        <div className="flex justify-center  lg:justify-end lg:w-150 text-justify ">
+        <div className="flex justify-center lg:justify-end w-full lg:max-w-xl text-justify">
           <ServiceCard {...services[active as keyof typeof services]} />
         </div>
       </div>
